@@ -16,5 +16,7 @@ Gives Dolphin's Grace when the player is wearing the full set of Team Aqua Armor
 
 ## Team Magma
 
+Gives Fire Resistance when the player is wearing the full set of Team Aqua Armor with following conditions:
+
 1. Have at least one Fire-type Pokemon
 2. Does not have any Water-type Pokemon
