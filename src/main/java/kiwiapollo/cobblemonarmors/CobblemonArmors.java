@@ -3,9 +3,9 @@ package kiwiapollo.cobblemonarmors;
 import kiwiapollo.cobblemonarmors.armors.ArmorSet;
 import kiwiapollo.cobblemonarmors.armors.TeamAquaArmorSet;
 import kiwiapollo.cobblemonarmors.armors.TeamMagmaArmorSet;
+import kiwiapollo.cobblemonarmors.features.ArmorSetEventHandler;
 import kiwiapollo.cobblemonarmors.materials.ArmorIngredient;
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -22,8 +22,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static kiwiapollo.cobblemonarmors.effects.ArmorSetEffectHandler.onServerTick;
 
 public class CobblemonArmors implements ModInitializer {
 	public static final String NAMESPACE = "cobblemonarmors";
@@ -75,7 +73,7 @@ public class CobblemonArmors implements ModInitializer {
 
 		for (ArmorSet armorSet : ARMOR_SETS) {
 			ServerTickEvents.END_SERVER_TICK.register(
-					server -> onServerTick(server, armorSet)
+					server -> ArmorSetEventHandler.onServerTick(server, armorSet)
 			);
 		}
 	}
