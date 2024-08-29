@@ -1,9 +1,12 @@
 package kiwiapollo.cobblemonarmors.materials;
 
+import kiwiapollo.cobblemonarmors.CobblemonArmors;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.Registries;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.Lazy;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.Util;
@@ -20,7 +23,9 @@ public enum ArmorMaterials implements StringIdentifiable, ArmorMaterial {
                 map.put(ArmorItem.Type.HELMET, 1);
             }),
             15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
+        return Ingredient.ofItems(new ItemConvertible[]{
+                Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "aqua_scrap"))
+        });
     }),
     TEAM_MAGMA("team_magma", 5,
             (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
@@ -30,7 +35,9 @@ public enum ArmorMaterials implements StringIdentifiable, ArmorMaterial {
                 map.put(ArmorItem.Type.HELMET, 1);
             }),
             15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
+        return Ingredient.ofItems(new ItemConvertible[]{
+                Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "magma_scrap"))
+        });
     }),
     TEAM_ROCKET("team_rocket", 5,
             (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
