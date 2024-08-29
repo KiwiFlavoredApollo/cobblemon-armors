@@ -144,7 +144,7 @@ public enum ArmorMaterials implements StringIdentifiable, ArmorMaterial {
     }
 
     public String getName() {
-        return this.name;
+        return Identifier.of(CobblemonArmors.NAMESPACE, this.name).toString();
     }
 
     public float getToughness() {
