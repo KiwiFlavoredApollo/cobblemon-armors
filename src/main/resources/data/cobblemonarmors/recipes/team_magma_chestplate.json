@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
+    "M M",
     "MMM",
-    "M M"
+    "MMM"
   ],
   "key": {
     "M": {
@@ -10,7 +11,7 @@
     }
   },
   "result": {
-    "item": "cobblemonarmors:team_magma_helmet",
+    "item": "cobblemonarmors:team_magma_chestplate",
     "count": 1
   }
 }

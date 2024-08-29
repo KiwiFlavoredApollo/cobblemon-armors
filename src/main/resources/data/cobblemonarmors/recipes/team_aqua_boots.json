@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A A",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "item": "cobblemonarmors:aqua_thread"
+    }
+  },
+  "result": {
+    "item": "cobblemonarmors:team_aqua_boots",
+    "count": 1
+  }
+}
