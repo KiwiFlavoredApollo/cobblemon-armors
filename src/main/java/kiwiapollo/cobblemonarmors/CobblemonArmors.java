@@ -31,7 +31,7 @@ public class CobblemonArmors implements ModInitializer {
 	public static final RegistryKey<ItemGroup> COBBLEMON_ARMOR_ITEM_GROUP_KEY =
 			RegistryKey.of(Registries.ITEM_GROUP.getKey(), new Identifier(NAMESPACE, "item_group"));
 	public static final ItemGroup COBBLEMON_ARMOR_ITEM_GROUP = FabricItemGroup.builder()
-			.icon(() -> new ItemStack(Items.DIAMOND))
+			.icon(() -> new ItemStack(Registries.ITEM.get(Identifier.of(NAMESPACE, "team_magma_helmet"))))
 			.displayName(Text.translatable("Cobblemon Armors"))
 			.build();
 
