@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "cobblemonarmors:item/magma_scrap"
+    "layer0": "cobblemonarmors:item/magma_textile"
   }
 }
