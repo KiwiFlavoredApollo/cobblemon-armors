@@ -6,11 +6,11 @@
   ],
   "key": {
     "A": {
-      "item": "cobblemonarmors:aqua_thread"
+      "item": "cobblemonarmors:magma_thread"
     }
   },
   "result": {
-    "item": "cobblemonarmors:team_aqua_helmet",
+    "item": "cobblemonarmors:team_magma_helmet",
     "count": 1
   }
 }

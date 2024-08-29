@@ -5,14 +5,14 @@
       "item": "minecraft:sea_pickle"
     },
     {
-      "item": "minecraft:dried_kelp"
+      "item": "minecraft:string"
     },
     {
-      "item": "minecraft:blue_dye"
+      "item": "minecraft:string"
     }
   ],
   "result": {
-    "item": "cobblemonarmors:aqua_textile",
+    "item": "cobblemonarmors:aqua_thread",
     "count": 1
   }
 }
