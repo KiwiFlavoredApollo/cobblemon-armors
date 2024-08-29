@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
 public class Armor {
-    public final Item item;
+    public final ArmorItem item;
     public final Identifier identifier;
 
     public Armor(ArmorMaterial armorMaterial, ArmorItem.Type armorItemType, String path) {
