@@ -32,7 +32,7 @@ public class CobblemonArmors implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ARMOR_SETS.add(new TeamAquaArmorSet());
-//		ARMOR_SETS.add(new TeamMagmaArmorSet());
+		ARMOR_SETS.add(new TeamMagmaArmorSet());
 
 		for (ArmorSet armorSet : ARMOR_SETS) {
 			Registry.register(Registries.ITEM, armorSet.helmet.identifier, armorSet.helmet.item);
