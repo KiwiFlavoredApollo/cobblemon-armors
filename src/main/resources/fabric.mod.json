@@ -19,7 +19,7 @@
 			"kiwiapollo.cobblemonarmors.CobblemonArmors"
 		],
 		"client": [
-			"kiwiapollo.cobblemonarmors.TemplateModClient"
+			"kiwiapollo.cobblemonarmors.CobblemonArmorsClient"
 		]
 	},
 	"mixins": [
