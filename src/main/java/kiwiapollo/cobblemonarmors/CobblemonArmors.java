@@ -6,6 +6,7 @@ import kiwiapollo.cobblemonarmors.armors.TeamMagmaArmorSet;
 import kiwiapollo.cobblemonarmors.materials.ArmorIngredient;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
@@ -16,12 +17,17 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static kiwiapollo.cobblemonarmors.effects.ArmorSetEffectHandler.onServerTick;
+
 public class CobblemonArmors implements ModInitializer {
 	public static final String NAMESPACE = "cobblemonarmors";
+	public static final Logger LOGGER = LoggerFactory.getLogger(NAMESPACE);
 	public static final List<ArmorSet> ARMOR_SETS = new ArrayList<>();
 	public static final List<ArmorIngredient> ARMOR_INGREDIENTS = new ArrayList<>();
 	public static final RegistryKey<ItemGroup> COBBLEMON_ARMOR_ITEM_GROUP_KEY =
@@ -65,6 +71,12 @@ public class CobblemonArmors implements ModInitializer {
 			ItemGroupEvents.modifyEntriesEvent(COBBLEMON_ARMOR_ITEM_GROUP_KEY).register(itemGroup -> {
 				itemGroup.add(armorIngredient.item);
 			});
+		}
+
+		for (ArmorSet armorSet : ARMOR_SETS) {
+			ServerTickEvents.END_SERVER_TICK.register(
+					server -> onServerTick(server, armorSet)
+			);
 		}
 	}
 }
