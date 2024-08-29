@@ -1,12 +1,8 @@
 package kiwiapollo.cobblemonarmors.armors;
 
+import kiwiapollo.cobblemonarmors.features.TeamAquaArmorSetFeature;
 import kiwiapollo.cobblemonarmors.materials.ArmorMaterials;
-import kiwiapollo.cobblemonarmors.predicates.TeamAquaPredicate;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.server.network.ServerPlayerEntity;
-
-import java.util.function.Predicate;
 
 public class TeamAquaArmorSet extends ArmorSet {
     public TeamAquaArmorSet() {
@@ -15,8 +11,7 @@ public class TeamAquaArmorSet extends ArmorSet {
                 new Armor(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.CHESTPLATE, "team_aqua_chestplate"),
                 new Armor(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.LEGGINGS, "team_aqua_leggings"),
                 new Armor(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.BOOTS, "team_aqua_boots"),
-                new TeamAquaPredicate(),
-                StatusEffects.STRENGTH
+                new TeamAquaArmorSetFeature()
         );
     }
 }
