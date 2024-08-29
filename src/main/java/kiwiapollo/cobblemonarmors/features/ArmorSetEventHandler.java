@@ -1,40 +1,40 @@
-package kiwiapollo.cobblemonarmors.effects;
+package kiwiapollo.cobblemonarmors.features;
 
 import kiwiapollo.cobblemonarmors.armors.ArmorSet;
+import kiwiapollo.cobblemonarmors.exceptions.PlayerNotWearingArmorSetException;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 
-import java.util.List;
-
-public class ArmorSetEffectHandler {
-    public static int DURATION = 60;
-
+public class ArmorSetEventHandler {
     public static void onServerTick(MinecraftServer server, ArmorSet armorSet) {
-        List<ServerPlayerEntity> players = server.getPlayerManager().getPlayerList();
+        for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
+            try {
+                assertPlayerWearingArmorSet(player, armorSet);
 
-        players = players.stream().filter(player -> isPlayerWearingArmorSet(player, armorSet)).toList();
-        players = players.stream().filter(armorSet.predicate).toList();
+                armorSet.feature.unlock(player);
 
-        for (ServerPlayerEntity player : players) {
-            player.addStatusEffect(new StatusEffectInstance(
-                    armorSet.effect, DURATION, 0,
-                    false, false, true
-            ));
+            } catch (PlayerNotWearingArmorSetException e) {
+                return;
+            }
         }
     }
 
-    private static boolean isPlayerWearingArmorSet(PlayerEntity player, ArmorSet armorSet) {
+    private static void assertPlayerWearingArmorSet(ServerPlayerEntity player, ArmorSet armorSet)
+            throws PlayerNotWearingArmorSetException {
         boolean helmet = isWearingArmor(player, EquipmentSlot.HEAD, armorSet.helmet.item);
         boolean chestplate = isWearingArmor(player, EquipmentSlot.CHEST, armorSet.chestplate.item);
         boolean leggings = isWearingArmor(player, EquipmentSlot.LEGS, armorSet.leggings.item);
         boolean boots = isWearingArmor(player, EquipmentSlot.FEET, armorSet.boots.item);
 
-        return helmet && chestplate && leggings && boots;
+        if (helmet && chestplate && leggings && boots) {
+            return;
+        }
+
+        throw new PlayerNotWearingArmorSetException();
     }
 
     private static boolean isWearingArmor(PlayerEntity player, EquipmentSlot slot, ArmorItem armorItem) {
