@@ -9,7 +9,7 @@ public class TeamAquaArmorSet extends ArmorSet {
                 new Armor(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, "team_aqua_helmet"),
                 new Armor(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.CHESTPLATE, "team_aqua_chestplate"),
                 new Armor(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.LEGGINGS, "team_aqua_leggings"),
-                new Armor(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.BOOTS, "team_aqua_boots ")
+                new Armor(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.BOOTS, "team_aqua_boots")
         );
     }
 }
