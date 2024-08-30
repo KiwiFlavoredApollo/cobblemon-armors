@@ -24,7 +24,7 @@ public enum ArmorMaterials implements StringIdentifiable, ArmorMaterial {
             }),
             15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{
-                Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "aqua_scrap"))
+                Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "aqua_thread"))
         });
     }),
     TEAM_MAGMA("team_magma", 5,
@@ -36,7 +36,7 @@ public enum ArmorMaterials implements StringIdentifiable, ArmorMaterial {
             }),
             15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{
-                Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "magma_scrap"))
+                Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "magma_thread"))
         });
     }),
     TEAM_ROCKET("team_rocket", 5,

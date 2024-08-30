@@ -3,6 +3,7 @@ package kiwiapollo.cobblemonarmors;
 import kiwiapollo.cobblemonarmors.armors.ArmorSet;
 import kiwiapollo.cobblemonarmors.armors.TeamAquaArmorSet;
 import kiwiapollo.cobblemonarmors.armors.TeamMagmaArmorSet;
+import kiwiapollo.cobblemonarmors.armors.TeamRocketArmorSet;
 import kiwiapollo.cobblemonarmors.features.ArmorSetEventHandler;
 import kiwiapollo.cobblemonarmors.materials.ArmorIngredient;
 import net.fabricmc.api.ModInitializer;
@@ -39,6 +40,7 @@ public class CobblemonArmors implements ModInitializer {
 	public void onInitialize() {
 		ARMOR_SETS.add(new TeamAquaArmorSet());
 		ARMOR_SETS.add(new TeamMagmaArmorSet());
+		ARMOR_SETS.add(new TeamRocketArmorSet());
 
 		ARMOR_INGREDIENTS.add(new ArmorIngredient("aqua_thread"));
 		ARMOR_INGREDIENTS.add(new ArmorIngredient("magma_thread"));
