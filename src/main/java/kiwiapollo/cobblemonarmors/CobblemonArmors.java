@@ -44,6 +44,7 @@ public class CobblemonArmors implements ModInitializer {
 
 		ARMOR_INGREDIENTS.add(new ArmorIngredient("aqua_thread"));
 		ARMOR_INGREDIENTS.add(new ArmorIngredient("magma_thread"));
+		ARMOR_INGREDIENTS.add(new ArmorIngredient("rocket_thread"));
 
 		for (ArmorSet armorSet : ARMOR_SETS) {
 			Registry.register(Registries.ITEM, armorSet.helmet.identifier, armorSet.helmet.item);
