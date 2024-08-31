@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "M M"
+  ],
+  "key": {
+    "M": {
+      "item": "cobblemonarmors:rocket_thread"
+    }
+  },
+  "result": {
+    "item": "cobblemonarmors:team_rocket_helmet",
+    "count": 1
+  }
+}
