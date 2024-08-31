@@ -1,11 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "AAA",
-    "A A"
+    "MMM",
+    "M M"
   ],
   "key": {
-    "A": {
+    "M": {
       "item": "cobblemonarmors:aqua_thread"
     }
   },
