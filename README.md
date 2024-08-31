@@ -28,3 +28,7 @@ Gives Resistance when the player is wearing the full set of Team Rocket Armor wi
 
 1. Have at least one Poison-type Pokemon
 2. Does not have any Psychic-type Pokemon
+
+## Credit
+
+- [Toss_knight](https://discordapp.com/users/831822833553375252) for Team Magma Armor Texture
