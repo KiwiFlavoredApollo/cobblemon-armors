@@ -1,11 +1,9 @@
 package kiwiapollo.cobblemonarmors.features;
 
 import com.cobblemon.mod.common.Cobblemon;
-import com.cobblemon.mod.common.api.pokemon.PokemonSpecies;
 import com.cobblemon.mod.common.api.types.ElementalType;
 import com.cobblemon.mod.common.api.types.ElementalTypes;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.cobblemon.mod.common.pokemon.Species;
 import kiwiapollo.cobblemonarmors.exceptions.ForbiddenPokemonExistException;
 import kiwiapollo.cobblemonarmors.exceptions.RequiredPokemonNotExistException;
 import net.minecraft.entity.effect.StatusEffectInstance;
