@@ -1,4 +1,4 @@
-package kiwiapollo.cobblemonarmors.utilities;
+package kiwiapollo.cobblemonarmors.render;
 
 import software.bernie.geckolib.animatable.client.RenderProvider;
 

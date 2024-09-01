@@ -2,7 +2,6 @@ package kiwiapollo.cobblemonarmors.render;
 
 import kiwiapollo.cobblemonarmors.CobblemonArmors;
 import kiwiapollo.cobblemonarmors.armors.MythrilArmorItem;
-import kiwiapollo.cobblemonarmors.utilities.RenderProviderFactory;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -12,7 +11,7 @@ import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class RenderProviderFactoryClient implements RenderProviderFactory {
+public class MythrilArmorRenderProviderFactoryClient implements RenderProviderFactory {
     @Override
     public RenderProvider create() {
         return new RenderProvider() {

@@ -1,6 +1,6 @@
 package kiwiapollo.cobblemonarmors.armors;
 
-import kiwiapollo.cobblemonarmors.utilities.RenderProviderFactoryProxy;
+import kiwiapollo.cobblemonarmors.render.MythrilArmorRenderProviderFactoryProxy;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -21,7 +21,7 @@ public class MythrilArmorItem extends ArmorItem implements GeoItem {
 
     @Override
     public void createRenderer(Consumer<Object> consumer) {
-        consumer.accept(RenderProviderFactoryProxy.renderProviderFactory.create());
+        consumer.accept(new MythrilArmorRenderProviderFactoryProxy().create());
     }
 
     @Override
