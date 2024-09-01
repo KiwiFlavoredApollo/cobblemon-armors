@@ -1,7 +1,6 @@
 package kiwiapollo.cobblemonarmors.armors;
 
-import kiwiapollo.cobblemonarmors.CobblemonArmors;
-import kiwiapollo.cobblemonarmors.utilities.RenderProviderProxy;
+import kiwiapollo.cobblemonarmors.utilities.RenderProviderFactoryProxy;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -12,17 +11,17 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class GeckoArmorItem extends ArmorItem implements GeoItem {
+public class MythrilArmorItem extends ArmorItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
-    public GeckoArmorItem(ArmorMaterial material, Type type, Settings settings) {
+    public MythrilArmorItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
     }
 
     @Override
     public void createRenderer(Consumer<Object> consumer) {
-        consumer.accept(RenderProviderProxy.renderProvider);
+        consumer.accept(RenderProviderFactoryProxy.renderProviderFactory.create());
     }
 
     @Override

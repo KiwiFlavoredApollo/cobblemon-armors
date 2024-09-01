@@ -47,10 +47,10 @@ public class CobblemonArmors implements ModInitializer {
 		ARMOR_INGREDIENTS.add(new ArmorIngredient("rocket_thread"));
 
 		for (ArmorSet armorSet : ARMOR_SETS) {
-			Registry.register(Registries.ITEM, armorSet.helmet.identifier, armorSet.helmet.item);
-			Registry.register(Registries.ITEM, armorSet.chestplate.identifier, armorSet.chestplate.item);
-			Registry.register(Registries.ITEM, armorSet.leggings.identifier, armorSet.leggings.item);
-			Registry.register(Registries.ITEM, armorSet.boots.identifier, armorSet.boots.item);
+			Registry.register(Registries.ITEM, armorSet.helmet.identifier, armorSet.helmet.armotItem);
+			Registry.register(Registries.ITEM, armorSet.chestplate.identifier, armorSet.chestplate.armotItem);
+			Registry.register(Registries.ITEM, armorSet.leggings.identifier, armorSet.leggings.armotItem);
+			Registry.register(Registries.ITEM, armorSet.boots.identifier, armorSet.boots.armotItem);
 		}
 
 		for (ArmorIngredient armorIngredient : ARMOR_INGREDIENTS) {
@@ -61,10 +61,10 @@ public class CobblemonArmors implements ModInitializer {
 
 		for (ArmorSet armorSet : ARMOR_SETS) {
 			ItemGroupEvents.modifyEntriesEvent(COBBLEMON_ARMOR_ITEM_GROUP_KEY).register(itemGroup -> {
-				itemGroup.add(armorSet.helmet.item);
-				itemGroup.add(armorSet.chestplate.item);
-				itemGroup.add(armorSet.leggings.item);
-				itemGroup.add(armorSet.boots.item);
+				itemGroup.add(armorSet.helmet.armotItem);
+				itemGroup.add(armorSet.chestplate.armotItem);
+				itemGroup.add(armorSet.leggings.armotItem);
+				itemGroup.add(armorSet.boots.armotItem);
 			});
 		}
 

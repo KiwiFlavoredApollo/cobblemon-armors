@@ -25,10 +25,10 @@ public class ArmorSetEventHandler {
 
     private static void assertPlayerWearingArmorSet(ServerPlayerEntity player, ArmorSet armorSet)
             throws PlayerNotWearingArmorSetException {
-        boolean helmet = isWearingArmor(player, EquipmentSlot.HEAD, armorSet.helmet.item);
-        boolean chestplate = isWearingArmor(player, EquipmentSlot.CHEST, armorSet.chestplate.item);
-        boolean leggings = isWearingArmor(player, EquipmentSlot.LEGS, armorSet.leggings.item);
-        boolean boots = isWearingArmor(player, EquipmentSlot.FEET, armorSet.boots.item);
+        boolean helmet = isWearingArmor(player, EquipmentSlot.HEAD, armorSet.helmet.armotItem);
+        boolean chestplate = isWearingArmor(player, EquipmentSlot.CHEST, armorSet.chestplate.armotItem);
+        boolean leggings = isWearingArmor(player, EquipmentSlot.LEGS, armorSet.leggings.armotItem);
+        boolean boots = isWearingArmor(player, EquipmentSlot.FEET, armorSet.boots.armotItem);
 
         if (helmet && chestplate && leggings && boots) {
             return;
