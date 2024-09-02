@@ -2,7 +2,7 @@ package kiwiapollo.cobblemonarmors.render;
 
 import software.bernie.geckolib.animatable.client.RenderProvider;
 
-public class MythrilArmorRenderProviderFactoryProxy implements RenderProviderFactory {
+public class PikachuArmorRenderProviderFactoryProxy implements RenderProviderFactory {
     private static RenderProviderFactory renderProviderFactory;
 
     @Override
@@ -11,6 +11,6 @@ public class MythrilArmorRenderProviderFactoryProxy implements RenderProviderFac
     }
 
     public static void setRenderProviderFactory(RenderProviderFactory renderProviderFactory) {
-        MythrilArmorRenderProviderFactoryProxy.renderProviderFactory = renderProviderFactory;
+        PikachuArmorRenderProviderFactoryProxy.renderProviderFactory = renderProviderFactory;
     }
 }

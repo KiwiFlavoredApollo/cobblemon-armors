@@ -1,7 +1,6 @@
 package kiwiapollo.cobblemonarmors.armors;
 
 import kiwiapollo.cobblemonarmors.render.MagikarpArmorRenderProviderFactoryProxy;
-import kiwiapollo.cobblemonarmors.render.MythrilArmorRenderProviderFactoryProxy;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import software.bernie.geckolib.animatable.GeoItem;

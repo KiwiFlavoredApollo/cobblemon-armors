@@ -1,7 +1,7 @@
 package kiwiapollo.cobblemonarmors.render;
 
 import kiwiapollo.cobblemonarmors.CobblemonArmors;
-import kiwiapollo.cobblemonarmors.armors.MythrilArmorItem;
+import kiwiapollo.cobblemonarmors.armors.MagikarpArmorItem;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -20,7 +20,7 @@ public class MagikarpArmorRenderProviderFactoryClient implements RenderProviderF
                     LivingEntity livingEntity, ItemStack itemStack,
                     EquipmentSlot equipmentSlot, BipedEntityModel<LivingEntity> original
             ) {
-                GeoArmorRenderer<MythrilArmorItem> renderer = new GeoArmorRenderer<>(
+                GeoArmorRenderer<MagikarpArmorItem> renderer = new GeoArmorRenderer<>(
                         new DefaultedItemGeoModel<>(Identifier.of(CobblemonArmors.NAMESPACE, "magikarp_armor"))
                 );
                 renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
