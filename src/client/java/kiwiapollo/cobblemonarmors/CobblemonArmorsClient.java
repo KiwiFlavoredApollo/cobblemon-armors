@@ -1,9 +1,6 @@
 package kiwiapollo.cobblemonarmors;
 
-import kiwiapollo.cobblemonarmors.render.MythrilArmorRenderProviderFactoryClient;
-import kiwiapollo.cobblemonarmors.render.MythrilArmorRenderProviderFactoryProxy;
-import kiwiapollo.cobblemonarmors.render.TestArmorRenderProviderFactoryClient;
-import kiwiapollo.cobblemonarmors.render.TestArmorRenderProviderFactoryProxy;
+import kiwiapollo.cobblemonarmors.render.*;
 import net.fabricmc.api.ClientModInitializer;
 
 public class CobblemonArmorsClient implements ClientModInitializer {
@@ -11,5 +8,6 @@ public class CobblemonArmorsClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		MythrilArmorRenderProviderFactoryProxy.setRenderProviderFactory(new MythrilArmorRenderProviderFactoryClient());
 		TestArmorRenderProviderFactoryProxy.setRenderProviderFactory(new TestArmorRenderProviderFactoryClient());
+		MagikarpArmorRenderProviderFactoryProxy.setRenderProviderFactory(new MagikarpArmorRenderProviderFactoryClient());
 	}
 }

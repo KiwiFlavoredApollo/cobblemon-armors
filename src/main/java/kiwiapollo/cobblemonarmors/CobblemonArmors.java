@@ -28,6 +28,7 @@ public class CobblemonArmors implements ModInitializer {
 	public static final String NAMESPACE = "cobblemonarmors";
 	public static final Logger LOGGER = LoggerFactory.getLogger(NAMESPACE);
 	public static final List<ArmorSet> ARMOR_SETS = new ArrayList<>();
+	public static final List<Armor> ARMORS = new ArrayList<>();
 	public static final List<ArmorIngredient> ARMOR_INGREDIENTS = new ArrayList<>();
 	public static final RegistryKey<ItemGroup> COBBLEMON_ARMOR_ITEM_GROUP_KEY =
 			RegistryKey.of(Registries.ITEM_GROUP.getKey(), new Identifier(NAMESPACE, "item_group"));
@@ -53,6 +54,10 @@ public class CobblemonArmors implements ModInitializer {
 			Registry.register(Registries.ITEM, armorSet.boots.identifier, armorSet.boots.armotItem);
 		}
 
+		for (Armor armor : ARMORS) {
+			Registry.register(Registries.ITEM, armor.identifier, armor.armotItem);
+		}
+
 		for (ArmorIngredient armorIngredient : ARMOR_INGREDIENTS) {
 			Registry.register(Registries.ITEM, armorIngredient.identifier, armorIngredient.item);
 		}
@@ -65,6 +70,12 @@ public class CobblemonArmors implements ModInitializer {
 				itemGroup.add(armorSet.chestplate.armotItem);
 				itemGroup.add(armorSet.leggings.armotItem);
 				itemGroup.add(armorSet.boots.armotItem);
+			});
+		}
+
+		for (Armor armor : ARMORS) {
+			ItemGroupEvents.modifyEntriesEvent(COBBLEMON_ARMOR_ITEM_GROUP_KEY).register(itemGroup -> {
+				itemGroup.add(armor.armotItem);
 			});
 		}
 
