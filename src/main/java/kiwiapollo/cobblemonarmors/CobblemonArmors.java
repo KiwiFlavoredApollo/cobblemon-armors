@@ -20,6 +20,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import software.bernie.geckolib.model.DefaultedItemGeoModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,28 +45,46 @@ public class CobblemonArmors implements ModInitializer {
 		ARMOR_SETS.add(new TeamRocketArmorSet());
 
 		ARMORS.add(new Armor(
-				new PikachuArmorItem(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings()),
-				Identifier.of(CobblemonArmors.NAMESPACE, "pikachu_helmet")
+				new CustomArmorItem(
+						ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings(),
+						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "pikachu_armor"))
+				),
+				Identifier.of(NAMESPACE, "pikachu_helmet")
 		));
 		ARMORS.add(new Armor(
-				new MagikarpArmorItem(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings()),
-				Identifier.of(CobblemonArmors.NAMESPACE, "magikarp_helmet")
+				new CustomArmorItem(
+						ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings(),
+						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "magikarp_armor"))
+				),
+				Identifier.of(NAMESPACE, "magikarp_helmet")
 		));
 		ARMORS.add(new Armor(
-				new FennekinArmorItem(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings()),
-				Identifier.of(CobblemonArmors.NAMESPACE, "fennekin_helmet")
+				new CustomArmorItem(
+						ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings(),
+						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "fennekin_armor"))
+				),
+				Identifier.of(NAMESPACE, "fennekin_helmet")
 		));
 		ARMORS.add(new Armor(
-				new FennekinArmorItem(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()),
-				Identifier.of(CobblemonArmors.NAMESPACE, "fennekin_chestplate")
+				new CustomArmorItem(
+						ArmorMaterials.TEAM_AQUA, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(),
+						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "fennekin_armor"))
+				),
+				Identifier.of(NAMESPACE, "fennekin_chestplate")
 		));
 		ARMORS.add(new Armor(
-				new SerenaArmorItem(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings()),
-				Identifier.of(CobblemonArmors.NAMESPACE, "serena_helmet")
+				new CustomArmorItem(
+						ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings(),
+						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "serena_armor"))
+				),
+				Identifier.of(NAMESPACE, "serena_helmet")
 		));
 		ARMORS.add(new Armor(
-				new SerenaArmorItem(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()),
-				Identifier.of(CobblemonArmors.NAMESPACE, "serena_chestplate")
+				new CustomArmorItem(
+						ArmorMaterials.TEAM_AQUA, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(),
+						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "serena_armor"))
+				),
+				Identifier.of(NAMESPACE, "serena_chestplate")
 		));
 
 		ARMOR_INGREDIENTS.add(new ArmorIngredient("aqua_thread"));
