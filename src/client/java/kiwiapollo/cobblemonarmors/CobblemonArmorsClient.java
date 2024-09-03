@@ -8,5 +8,7 @@ public class CobblemonArmorsClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		PikachuArmorRenderProviderFactoryProxy.setRenderProviderFactory(new PikachuArmorRenderProviderFactoryClient());
 		MagikarpArmorRenderProviderFactoryProxy.setRenderProviderFactory(new MagikarpArmorRenderProviderFactoryClient());
+		FennekinArmorRenderProviderFactoryProxy.setRenderProviderFactory(new FennekinArmorRenderProviderFactoryClient());
+		SerenaArmorRenderProviderFactoryProxy.setRenderProviderFactory(new SerenaArmorRenderProviderFactoryClient());
 	}
 }

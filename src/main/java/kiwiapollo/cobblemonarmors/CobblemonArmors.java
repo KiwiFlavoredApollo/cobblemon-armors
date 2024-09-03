@@ -43,6 +43,31 @@ public class CobblemonArmors implements ModInitializer {
 		ARMOR_SETS.add(new TeamMagmaArmorSet());
 		ARMOR_SETS.add(new TeamRocketArmorSet());
 
+		ARMORS.add(new Armor(
+				new PikachuArmorItem(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings()),
+				Identifier.of(CobblemonArmors.NAMESPACE, "pikachu_helmet")
+		));
+		ARMORS.add(new Armor(
+				new MagikarpArmorItem(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings()),
+				Identifier.of(CobblemonArmors.NAMESPACE, "magikarp_helmet")
+		));
+		ARMORS.add(new Armor(
+				new FennekinArmorItem(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings()),
+				Identifier.of(CobblemonArmors.NAMESPACE, "fennekin_helmet")
+		));
+		ARMORS.add(new Armor(
+				new FennekinArmorItem(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()),
+				Identifier.of(CobblemonArmors.NAMESPACE, "fennekin_chestplate")
+		));
+		ARMORS.add(new Armor(
+				new SerenaArmorItem(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings()),
+				Identifier.of(CobblemonArmors.NAMESPACE, "serena_helmet")
+		));
+		ARMORS.add(new Armor(
+				new SerenaArmorItem(ArmorMaterials.TEAM_AQUA, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()),
+				Identifier.of(CobblemonArmors.NAMESPACE, "serena_chestplate")
+		));
+
 		ARMOR_INGREDIENTS.add(new ArmorIngredient("aqua_thread"));
 		ARMOR_INGREDIENTS.add(new ArmorIngredient("magma_thread"));
 		ARMOR_INGREDIENTS.add(new ArmorIngredient("rocket_thread"));
