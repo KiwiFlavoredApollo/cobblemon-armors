@@ -1,15 +1,15 @@
 package kiwiapollo.cobblemonarmors;
 
-import kiwiapollo.cobblemonarmors.armors.ArmorSet;
-import kiwiapollo.cobblemonarmors.armors.TeamAquaArmorSet;
-import kiwiapollo.cobblemonarmors.armors.TeamMagmaArmorSet;
-import kiwiapollo.cobblemonarmors.armors.TeamRocketArmorSet;
+import kiwiapollo.cobblemonarmors.armors.*;
 import kiwiapollo.cobblemonarmors.features.ArmorSetEventHandler;
 import kiwiapollo.cobblemonarmors.materials.ArmorIngredient;
+import kiwiapollo.cobblemonarmors.materials.ArmorMaterials;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -71,20 +71,6 @@ public class CobblemonArmors implements ModInitializer {
 						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "fennekin_armor"))
 				),
 				Identifier.of(NAMESPACE, "fennekin_chestplate")
-		));
-		ARMORS.add(new Armor(
-				new CustomArmorItem(
-						ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings(),
-						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "serena_armor"))
-				),
-				Identifier.of(NAMESPACE, "serena_helmet")
-		));
-		ARMORS.add(new Armor(
-				new CustomArmorItem(
-						ArmorMaterials.TEAM_AQUA, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(),
-						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "serena_armor"))
-				),
-				Identifier.of(NAMESPACE, "serena_chestplate")
 		));
 
 		ARMOR_INGREDIENTS.add(new ArmorIngredient("aqua_thread"));
