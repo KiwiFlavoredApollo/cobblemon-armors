@@ -34,7 +34,7 @@ public class CobblemonArmors implements ModInitializer {
 	public static final RegistryKey<ItemGroup> COBBLEMON_ARMOR_ITEM_GROUP_KEY =
 			RegistryKey.of(Registries.ITEM_GROUP.getKey(), new Identifier(NAMESPACE, "item_group"));
 	public static final ItemGroup COBBLEMON_ARMOR_ITEM_GROUP = FabricItemGroup.builder()
-			.icon(() -> new ItemStack(Items.DIAMOND))
+			.icon(() -> new ItemStack(Registries.ITEM.get(Identifier.of(NAMESPACE, "fennekin_chestplate"))))
 			.displayName(Text.translatable("Cobblemon Armors"))
 			.build();
 
@@ -46,28 +46,28 @@ public class CobblemonArmors implements ModInitializer {
 
 		ARMORS.add(new Armor(
 				new CustomArmorItem(
-						ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings(),
+						ArmorMaterials.PIKACHU, ArmorItem.Type.HELMET, new FabricItemSettings(),
 						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "pikachu_armor"))
 				),
 				Identifier.of(NAMESPACE, "pikachu_helmet")
 		));
 		ARMORS.add(new Armor(
 				new CustomArmorItem(
-						ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings(),
+						ArmorMaterials.MAGIKARP, ArmorItem.Type.HELMET, new FabricItemSettings(),
 						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "magikarp_armor"))
 				),
 				Identifier.of(NAMESPACE, "magikarp_helmet")
 		));
 		ARMORS.add(new Armor(
 				new CustomArmorItem(
-						ArmorMaterials.TEAM_AQUA, ArmorItem.Type.HELMET, new FabricItemSettings(),
+						ArmorMaterials.FENNEKIN, ArmorItem.Type.HELMET, new FabricItemSettings(),
 						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "fennekin_armor"))
 				),
 				Identifier.of(NAMESPACE, "fennekin_helmet")
 		));
 		ARMORS.add(new Armor(
 				new CustomArmorItem(
-						ArmorMaterials.TEAM_AQUA, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(),
+						ArmorMaterials.FENNEKIN, ArmorItem.Type.CHESTPLATE, new FabricItemSettings(),
 						new DefaultedItemGeoModel<>(Identifier.of(NAMESPACE, "fennekin_armor"))
 				),
 				Identifier.of(NAMESPACE, "fennekin_chestplate")

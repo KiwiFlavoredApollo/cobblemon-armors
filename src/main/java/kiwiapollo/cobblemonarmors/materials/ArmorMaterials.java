@@ -47,7 +47,9 @@ public enum ArmorMaterials implements StringIdentifiable, ArmorMaterial {
                 map.put(ArmorItem.Type.HELMET, 1);
             }),
             15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
+        return Ingredient.ofItems(new ItemConvertible[]{
+                Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "rocket_thread"))
+        });
     }),
     TEAM_GALACTIC("team_galactic", 5,
             (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
@@ -80,6 +82,36 @@ public enum ArmorMaterials implements StringIdentifiable, ArmorMaterial {
         return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
     }),
     TEAM_SKULL("team_skull", 5,
+            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+                map.put(ArmorItem.Type.BOOTS, 1);
+                map.put(ArmorItem.Type.LEGGINGS, 2);
+                map.put(ArmorItem.Type.CHESTPLATE, 3);
+                map.put(ArmorItem.Type.HELMET, 1);
+            }),
+            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
+        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
+    }),
+    PIKACHU("pikachu", 5,
+            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+                map.put(ArmorItem.Type.BOOTS, 1);
+                map.put(ArmorItem.Type.LEGGINGS, 2);
+                map.put(ArmorItem.Type.CHESTPLATE, 3);
+                map.put(ArmorItem.Type.HELMET, 1);
+            }),
+            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
+        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
+    }),
+    FENNEKIN("fennekin", 5,
+            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+                map.put(ArmorItem.Type.BOOTS, 1);
+                map.put(ArmorItem.Type.LEGGINGS, 2);
+                map.put(ArmorItem.Type.CHESTPLATE, 3);
+                map.put(ArmorItem.Type.HELMET, 1);
+            }),
+            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
+        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
+    }),
+    MAGIKARP("magikarp", 5,
             (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 1);
                 map.put(ArmorItem.Type.LEGGINGS, 2);
