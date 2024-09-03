@@ -35,3 +35,7 @@ Gives Resistance when the player is wearing the full set of Team Rocket Armor wi
   - Team Magma Armor
   - Pikachu Hat
   - Magikarp Helmet
+
+## LICENSE
+- GPL 3.0 for source codes
+- Creative Commons Attribution-NonCommercial for assets 
