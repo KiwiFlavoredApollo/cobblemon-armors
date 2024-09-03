@@ -31,4 +31,7 @@ Gives Resistance when the player is wearing the full set of Team Rocket Armor wi
 
 ## Credit
 
-- [Toss_knight](https://discordapp.com/users/831822833553375252) for Team Magma Armor Texture
+- [Toss_knight](https://discordapp.com/users/831822833553375252) for following 3D modeling and textures:
+  - Team Magma Armor
+  - Pikachu Hat
+  - Magikarp Helmet
