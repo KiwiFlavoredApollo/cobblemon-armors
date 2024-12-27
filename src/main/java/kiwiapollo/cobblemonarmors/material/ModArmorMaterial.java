@@ -1,4 +1,4 @@
-package kiwiapollo.cobblemonarmors.materials;
+package kiwiapollo.cobblemonarmors.material;
 
 import kiwiapollo.cobblemonarmors.CobblemonArmors;
 import net.minecraft.item.*;
@@ -14,7 +14,7 @@ import net.minecraft.util.Util;
 import java.util.EnumMap;
 import java.util.function.Supplier;
 
-public enum ArmorMaterials implements StringIdentifiable, ArmorMaterial {
+public enum ModArmorMaterial implements StringIdentifiable, ArmorMaterial {
     TEAM_AQUA("team_aqua", 5,
             (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 1);
@@ -140,7 +140,7 @@ public enum ArmorMaterials implements StringIdentifiable, ArmorMaterial {
     private final float knockbackResistance;
     private final Lazy<Ingredient> repairIngredientSupplier;
 
-    private ArmorMaterials(
+    private ModArmorMaterial(
             String name, int durabilityMultiplier, EnumMap protectionAmounts,
             int enchantability, SoundEvent equipSound, float toughness,
             float knockbackResistance, Supplier repairIngredientSupplier

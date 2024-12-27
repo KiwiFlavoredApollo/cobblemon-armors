@@ -1,7 +1,7 @@
 package kiwiapollo.cobblemonarmors.datagen;
 
-import kiwiapollo.cobblemonarmors.armors.ModArmorItem;
-import kiwiapollo.cobblemonarmors.materials.ModArmorMaterialItem;
+import kiwiapollo.cobblemonarmors.armor.ModArmorItem;
+import kiwiapollo.cobblemonarmors.material.ModArmorMaterialItem;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;

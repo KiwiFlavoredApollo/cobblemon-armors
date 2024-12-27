@@ -7,6 +7,6 @@ import net.fabricmc.api.ClientModInitializer;
 public class CobblemonArmorsClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		RenderProviderFactoryProxy.setRenderProviderFactory(new RenderProviderFactoryClient());
+		RenderProviderFactoryProxy.getInstance().setRenderProviderFactory(new RenderProviderFactoryClient());
 	}
 }

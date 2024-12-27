@@ -4,6 +4,9 @@ import kiwiapollo.cobblemonarmors.armor.CustomModelArmorItem;
 import software.bernie.geckolib.animatable.client.RenderProvider;
 import software.bernie.geckolib.model.GeoModel;
 
-public interface RenderProviderFactory {
-    RenderProvider create(GeoModel<CustomModelArmorItem> model);
+public class NullRenderProviderFactory implements RenderProviderFactory {
+    @Override
+    public RenderProvider create(GeoModel<CustomModelArmorItem> model) {
+        throw new IllegalStateException();
+    }
 }
