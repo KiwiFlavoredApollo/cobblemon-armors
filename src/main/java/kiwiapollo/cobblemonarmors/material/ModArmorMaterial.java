@@ -15,111 +15,35 @@ import java.util.EnumMap;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements StringIdentifiable, ArmorMaterial {
-    TEAM_AQUA("team_aqua", 5,
-            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    AQUA_THREAD("team_aqua", 5,
+            Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 1);
                 map.put(ArmorItem.Type.LEGGINGS, 2);
                 map.put(ArmorItem.Type.CHESTPLATE, 3);
                 map.put(ArmorItem.Type.HELMET, 1);
             }),
             15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{
-                Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "aqua_thread"))
-        });
+        return Ingredient.ofItems(Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "aqua_thread")));
     }),
-    TEAM_MAGMA("team_magma", 5,
-            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    MAGMA_THREAD("team_magma", 5,
+            Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 1);
                 map.put(ArmorItem.Type.LEGGINGS, 2);
                 map.put(ArmorItem.Type.CHESTPLATE, 3);
                 map.put(ArmorItem.Type.HELMET, 1);
             }),
             15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{
-                Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "magma_thread"))
-        });
+        return Ingredient.ofItems(Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "magma_thread")));
     }),
-    TEAM_ROCKET("team_rocket", 5,
-            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    ROCKET_THREAD("team_rocket", 5,
+            Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 1);
                 map.put(ArmorItem.Type.LEGGINGS, 2);
                 map.put(ArmorItem.Type.CHESTPLATE, 3);
                 map.put(ArmorItem.Type.HELMET, 1);
             }),
             15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{
-                Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "rocket_thread"))
-        });
-    }),
-    TEAM_GALACTIC("team_galactic", 5,
-            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
-                map.put(ArmorItem.Type.BOOTS, 1);
-                map.put(ArmorItem.Type.LEGGINGS, 2);
-                map.put(ArmorItem.Type.CHESTPLATE, 3);
-                map.put(ArmorItem.Type.HELMET, 1);
-            }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
-    }),
-    TEAM_PLASMA("team_plasma", 5,
-            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
-                map.put(ArmorItem.Type.BOOTS, 1);
-                map.put(ArmorItem.Type.LEGGINGS, 2);
-                map.put(ArmorItem.Type.CHESTPLATE, 3);
-                map.put(ArmorItem.Type.HELMET, 1);
-            }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
-    }),
-    TEAM_FLARE("team_flare", 5,
-            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
-                map.put(ArmorItem.Type.BOOTS, 1);
-                map.put(ArmorItem.Type.LEGGINGS, 2);
-                map.put(ArmorItem.Type.CHESTPLATE, 3);
-                map.put(ArmorItem.Type.HELMET, 1);
-            }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
-    }),
-    TEAM_SKULL("team_skull", 5,
-            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
-                map.put(ArmorItem.Type.BOOTS, 1);
-                map.put(ArmorItem.Type.LEGGINGS, 2);
-                map.put(ArmorItem.Type.CHESTPLATE, 3);
-                map.put(ArmorItem.Type.HELMET, 1);
-            }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
-    }),
-    PIKACHU("pikachu", 5,
-            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
-                map.put(ArmorItem.Type.BOOTS, 1);
-                map.put(ArmorItem.Type.LEGGINGS, 2);
-                map.put(ArmorItem.Type.CHESTPLATE, 3);
-                map.put(ArmorItem.Type.HELMET, 1);
-            }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
-    }),
-    FENNEKIN("fennekin", 5,
-            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
-                map.put(ArmorItem.Type.BOOTS, 1);
-                map.put(ArmorItem.Type.LEGGINGS, 2);
-                map.put(ArmorItem.Type.CHESTPLATE, 3);
-                map.put(ArmorItem.Type.HELMET, 1);
-            }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
-    }),
-    MAGIKARP("magikarp", 5,
-            (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
-                map.put(ArmorItem.Type.BOOTS, 1);
-                map.put(ArmorItem.Type.LEGGINGS, 2);
-                map.put(ArmorItem.Type.CHESTPLATE, 3);
-                map.put(ArmorItem.Type.HELMET, 1);
-            }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.LEATHER});
+        return Ingredient.ofItems(Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "rocket_thread")));
     });
 
     public static final StringIdentifiable.Codec<net.minecraft.item.ArmorMaterials> CODEC =
