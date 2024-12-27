@@ -15,6 +15,9 @@
 	"icon": "assets/cobblemonarmors/icon.png",
 	"environment": "*",
 	"entrypoints": {
+		"fabric-datagen": [
+			"kiwiapollo.cobblemonarmors.datagen.DataGenerator"
+		],
 		"main": [
 			"kiwiapollo.cobblemonarmors.CobblemonArmors"
 		],
