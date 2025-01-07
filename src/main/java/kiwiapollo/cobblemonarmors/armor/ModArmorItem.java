@@ -23,6 +23,11 @@ public enum ModArmorItem {
     TEAM_ROCKET_LEGGINGS("team_rocket_leggings", new ArmorItem(ModArmorMaterial.ROCKET_THREAD, ArmorItem.Type.LEGGINGS, new Item.Settings())),
     TEAM_ROCKET_BOOTS("team_rocket_boots", new ArmorItem(ModArmorMaterial.ROCKET_THREAD, ArmorItem.Type.BOOTS, new Item.Settings())),
 
+    TEAM_PLASMA_HELMET("team_plasma_helmet", new ArmorItem(ModArmorMaterial.PLASMA_THREAD, ArmorItem.Type.HELMET, new Item.Settings())),
+    TEAM_PLASMA_CHESTPLATE("team_plasma_chestplate", new ArmorItem(ModArmorMaterial.PLASMA_THREAD, ArmorItem.Type.CHESTPLATE, new Item.Settings())),
+    TEAM_PLASMA_LEGGINGS("team_plasma_leggings", new ArmorItem(ModArmorMaterial.PLASMA_THREAD, ArmorItem.Type.LEGGINGS, new Item.Settings())),
+    TEAM_PLASMA_BOOTS("team_plasma_boots", new ArmorItem(ModArmorMaterial.PLASMA_THREAD, ArmorItem.Type.BOOTS, new Item.Settings())),
+
     PIKACHU_HELMET("pikachu_helmet", new PikachuArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings())),
     MAGIKARP_HELMET("magikarp_helmet", new MagikarpArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings())),
     FENNEKIN_HELMET("fennekin_helmet", new FennekinArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings())),

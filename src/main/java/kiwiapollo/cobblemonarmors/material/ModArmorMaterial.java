@@ -44,6 +44,16 @@ public enum ModArmorMaterial implements StringIdentifiable, ArmorMaterial {
             }),
             15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
         return Ingredient.ofItems(Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "rocket_thread")));
+    }),
+    PLASMA_THREAD("team_plasma", 5,
+            Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+                map.put(ArmorItem.Type.BOOTS, 1);
+                map.put(ArmorItem.Type.LEGGINGS, 2);
+                map.put(ArmorItem.Type.CHESTPLATE, 3);
+                map.put(ArmorItem.Type.HELMET, 1);
+            }),
+            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
+        return Ingredient.ofItems(Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "plasma_thread")));
     });
 
     public static final StringIdentifiable.Codec<net.minecraft.item.ArmorMaterials> CODEC =
