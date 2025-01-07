@@ -41,6 +41,5 @@ replay_*.log
 
 # project-specific
 
-resources/
 remappedSrc/
 *.cache/
