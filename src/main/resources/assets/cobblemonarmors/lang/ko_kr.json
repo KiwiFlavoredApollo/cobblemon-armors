@@ -1,19 +1,29 @@
 {
   "item.cobblemonarmors.aqua_thread": "아쿠아 실타래",
+  "item.cobblemonarmors.magma_thread": "마그마 실타래",
+  "item.cobblemonarmors.rocket_thread": "로켓 실타래",
+  "item.cobblemonarmors.plasma_thread": "플라즈마 실타래",
+  
   "item.cobblemonarmors.team_aqua_helmet": "아쿠아단 모자",
   "item.cobblemonarmors.team_aqua_chestplate": "아쿠아단 조끼",
   "item.cobblemonarmors.team_aqua_leggings": "아쿠아단 바지",
   "item.cobblemonarmors.team_aqua_boots": "아쿠아단 장화",
-  "item.cobblemonarmors.magma_thread": "마그마 실타래",
+  
   "item.cobblemonarmors.team_magma_helmet": "마그마단 모자",
   "item.cobblemonarmors.team_magma_chestplate": "마그마단 조끼",
   "item.cobblemonarmors.team_magma_leggings": "마그마단 바지",
   "item.cobblemonarmors.team_magma_boots": "마그마단 장화",
-  "item.cobblemonarmors.rocket_thread": "로켓 실타래",
+  
   "item.cobblemonarmors.team_rocket_helmet": "로켓단 모자",
   "item.cobblemonarmors.team_rocket_chestplate": "로켓단 조끼",
   "item.cobblemonarmors.team_rocket_leggings": "로켓단 바지",
   "item.cobblemonarmors.team_rocket_boots": "로켓단 장화",
+
+  "item.cobblemonarmors.team_plasma_helmet": "플라즈마 모자",
+  "item.cobblemonarmors.team_plasma_chestplate": "플라즈마 조끼",
+  "item.cobblemonarmors.team_plasma_leggings": "플라즈마 바지",
+  "item.cobblemonarmors.team_plasma_boots": "플라즈마 장화",
+  
   "item.cobblemonarmors.fennekin_helmet": "푸호꼬 헤어밴드",
   "item.cobblemonarmors.fennekin_chestplate": "푸호꼬 꼬리",
   "item.cobblemonarmors.pikachu_helmet": "피카츄 모자",
