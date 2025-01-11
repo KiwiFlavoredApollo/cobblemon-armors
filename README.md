@@ -12,29 +12,39 @@ Armors can be crafted with new materials:
 
 Gives Dolphin's Grace when the player is wearing the full set of Team Aqua Armor with following conditions:
 
-1. Have at least one Water-type Pokemon
-2. Does not have any Fire-type Pokemon
+1. Have at least one Water-type Pokémon
+2. Does not have any Fire-type Pokémon
 
 ## Team Magma
 
 Gives Fire Resistance when the player is wearing the full set of Team Magma Armor with following conditions:
 
-1. Have at least one Fire-type Pokemon
-2. Does not have any Water-type Pokemon
+1. Have at least one Fire-type Pokémon
+2. Does not have any Water-type Pokémon
 
 ## Team Rocket
 
 Gives Resistance when the player is wearing the full set of Team Rocket Armor with following conditions:
 
-1. Have at least one Poison-type Pokemon
-2. Does not have any Psychic-type Pokemon
+1. Have at least one Poison-type Pokémon
+2. Does not have any Psychic-type Pokémon
+
+## Team Plasma
+
+Gives Resistance when the player is wearing the full set of Team Rocket Armor with following conditions:
+
+1. Have at least one Electric-type Pokémon
+2. Does not have any Ground-type Pokémon
 
 ## Credit
 
-- [Toss_knight](https://discordapp.com/users/831822833553375252) for following 3D modeling and textures:
+- [Toss_knight](https://discordapp.com/users/831822833553375252)
   - Team Magma Armor
   - Pikachu Hat
   - Magikarp Helmet
+
+- [Mik ཀརྨ ঌ](https://discordapp.com/users/449068348727230465)
+  - Team Plasma Armor
 
 ## LICENSE
 - GPL 3.0 for source codes
