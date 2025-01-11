@@ -7,7 +7,8 @@ import net.minecraft.util.Identifier;
 public enum ModArmorMaterialItem {
     AQUA_THREAD("aqua_thread"),
     MAGMA_THREAD("magma_thread"),
-    ROCKET_THREAD("rocket_thread");
+    ROCKET_THREAD("rocket_thread"),
+    PLASMA_THREAD("plasma_thread");
 
     private final Identifier identifier;
     private final Item item;
