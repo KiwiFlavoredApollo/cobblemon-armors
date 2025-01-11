@@ -32,6 +32,6 @@ public class TeamAquaArmorSetFeatureEnabler extends ArmorSetFeatureEnabler {
 
     @Override
     protected void enable(ServerPlayerEntity player) {
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 60, 0, false, false, true));
+        player.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, DURATION, 0, false, false, true));
     }
 }

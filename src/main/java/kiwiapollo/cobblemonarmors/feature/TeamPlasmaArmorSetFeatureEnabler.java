@@ -14,25 +14,25 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
 
-public class TeamMagmaArmorSetFeatureEnabler extends ArmorSetFeatureEnabler {
+public class TeamPlasmaArmorSetFeatureEnabler extends ArmorSetFeatureEnabler {
     private static final Map<EquipmentSlot, ArmorItem> ARMOR_SET = Map.ofEntries(
-            Map.entry(EquipmentSlot.HEAD, ModArmorItem.TEAM_MAGMA_HELMET.getItem()),
-            Map.entry(EquipmentSlot.CHEST, ModArmorItem.TEAM_MAGMA_CHESTPLATE.getItem()),
-            Map.entry(EquipmentSlot.LEGS, ModArmorItem.TEAM_MAGMA_LEGGINGS.getItem()),
-            Map.entry(EquipmentSlot.FEET, ModArmorItem.TEAM_MAGMA_BOOTS.getItem())
+            Map.entry(EquipmentSlot.HEAD, ModArmorItem.TEAM_PLASMA_HELMET.getItem()),
+            Map.entry(EquipmentSlot.CHEST, ModArmorItem.TEAM_PLASMA_CHESTPLATE.getItem()),
+            Map.entry(EquipmentSlot.LEGS, ModArmorItem.TEAM_PLASMA_LEGGINGS.getItem()),
+            Map.entry(EquipmentSlot.FEET, ModArmorItem.TEAM_PLASMA_BOOTS.getItem())
     );
 
     private static final List<Predicate<ServerPlayerEntity>> PREDICATES = List.of(
-            new RequiredPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getFIRE())),
-            new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getWATER()))
+            new RequiredPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getELECTRIC())),
+            new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getGROUND()))
     );
 
-    public TeamMagmaArmorSetFeatureEnabler() {
+    public TeamPlasmaArmorSetFeatureEnabler() {
         super(ARMOR_SET, PREDICATES);
     }
 
     @Override
     protected void enable(ServerPlayerEntity player) {
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, DURATION, 0, false, false, true));
+        player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, DURATION, 0, false, false, true));
     }
 }

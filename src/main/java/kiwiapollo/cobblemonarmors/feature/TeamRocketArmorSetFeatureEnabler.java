@@ -33,6 +33,6 @@ public class TeamRocketArmorSetFeatureEnabler extends ArmorSetFeatureEnabler {
 
     @Override
     protected void enable(ServerPlayerEntity player) {
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 60, 0, false, false, true));
+        player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, DURATION, 0, false, false, true));
     }
 }

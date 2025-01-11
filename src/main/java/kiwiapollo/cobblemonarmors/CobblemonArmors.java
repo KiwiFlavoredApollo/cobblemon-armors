@@ -3,6 +3,7 @@ package kiwiapollo.cobblemonarmors;
 import kiwiapollo.cobblemonarmors.armor.*;
 import kiwiapollo.cobblemonarmors.feature.TeamAquaArmorSetFeatureEnabler;
 import kiwiapollo.cobblemonarmors.feature.TeamMagmaArmorSetFeatureEnabler;
+import kiwiapollo.cobblemonarmors.feature.TeamPlasmaArmorSetFeatureEnabler;
 import kiwiapollo.cobblemonarmors.feature.TeamRocketArmorSetFeatureEnabler;
 import kiwiapollo.cobblemonarmors.material.ModArmorMaterialItem;
 import net.fabricmc.api.ModInitializer;
@@ -59,5 +60,6 @@ public class CobblemonArmors implements ModInitializer {
 		ServerTickEvents.END_SERVER_TICK.register(new TeamAquaArmorSetFeatureEnabler());
 		ServerTickEvents.END_SERVER_TICK.register(new TeamMagmaArmorSetFeatureEnabler());
 		ServerTickEvents.END_SERVER_TICK.register(new TeamRocketArmorSetFeatureEnabler());
+		ServerTickEvents.END_SERVER_TICK.register(new TeamPlasmaArmorSetFeatureEnabler());
 	}
 }

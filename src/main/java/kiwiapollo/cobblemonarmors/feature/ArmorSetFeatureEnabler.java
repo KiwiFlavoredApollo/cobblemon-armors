@@ -12,6 +12,8 @@ import java.util.Map;
 import java.util.function.Predicate;
 
 public abstract class ArmorSetFeatureEnabler implements ServerTickEvents.EndTick {
+    protected final int DURATION = 100;
+
     private final Map<EquipmentSlot, ArmorItem> armorSet;
     private final List<Predicate<ServerPlayerEntity>> predicates;
 
