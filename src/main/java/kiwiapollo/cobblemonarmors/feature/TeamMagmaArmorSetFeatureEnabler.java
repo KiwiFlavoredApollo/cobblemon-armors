@@ -27,12 +27,11 @@ public class TeamMagmaArmorSetFeatureEnabler extends ArmorSetFeatureEnabler {
             new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getWATER()))
     );
 
-    public TeamMagmaArmorSetFeatureEnabler() {
-        super(ARMOR_SET, PREDICATES);
-    }
+    private static final List<StatusEffectInstance> EFFECTS = List.of(
+            new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 220, 0, false, false, true)
+    );
 
-    @Override
-    protected void enable(ServerPlayerEntity player) {
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, DURATION, 0, false, false, true));
+    public TeamMagmaArmorSetFeatureEnabler() {
+        super(ARMOR_SET, PREDICATES, EFFECTS);
     }
 }

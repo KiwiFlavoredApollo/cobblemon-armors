@@ -27,12 +27,11 @@ public class TeamPlasmaArmorSetFeatureEnabler extends ArmorSetFeatureEnabler {
             new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getGROUND()))
     );
 
-    public TeamPlasmaArmorSetFeatureEnabler() {
-        super(ARMOR_SET, PREDICATES);
-    }
+    private static final List<StatusEffectInstance> EFFECTS = List.of(
+            new StatusEffectInstance(StatusEffects.HASTE, 220, 0, false, false, true)
+    );
 
-    @Override
-    protected void enable(ServerPlayerEntity player) {
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, DURATION, 0, false, false, true));
+    public TeamPlasmaArmorSetFeatureEnabler() {
+        super(ARMOR_SET, PREDICATES, EFFECTS);
     }
 }

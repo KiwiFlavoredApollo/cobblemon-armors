@@ -26,12 +26,11 @@ public class TeamAquaArmorSetFeatureEnabler extends ArmorSetFeatureEnabler {
             new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getFIRE()))
     );
 
-    public TeamAquaArmorSetFeatureEnabler() {
-        super(ARMOR_SET, PREDICATES);
-    }
+    private static final List<StatusEffectInstance> EFFECTS = List.of(
+            new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 220, 0, false, false, true)
+    );
 
-    @Override
-    protected void enable(ServerPlayerEntity player) {
-        player.addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, DURATION, 0, false, false, true));
+    public TeamAquaArmorSetFeatureEnabler() {
+        super(ARMOR_SET, PREDICATES, EFFECTS);
     }
 }
