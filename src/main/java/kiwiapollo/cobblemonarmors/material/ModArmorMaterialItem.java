@@ -8,7 +8,9 @@ public enum ModArmorMaterialItem {
     AQUA_THREAD("aqua_thread"),
     MAGMA_THREAD("magma_thread"),
     ROCKET_THREAD("rocket_thread"),
-    PLASMA_THREAD("plasma_thread");
+    PLASMA_THREAD("plasma_thread"),
+    RAINBOW_ROCKET_THREAD("rainbow_rocket_thread"),
+    NEO_PLASMA_THREAD("neo_plasma_thread");
 
     private final Identifier identifier;
     private final Item item;

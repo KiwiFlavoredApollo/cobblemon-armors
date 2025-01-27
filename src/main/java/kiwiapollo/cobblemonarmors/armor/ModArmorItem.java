@@ -28,6 +28,16 @@ public enum ModArmorItem {
     TEAM_PLASMA_LEGGINGS("team_plasma_leggings", new ArmorItem(ModArmorMaterial.PLASMA_THREAD, ArmorItem.Type.LEGGINGS, new Item.Settings())),
     TEAM_PLASMA_BOOTS("team_plasma_boots", new ArmorItem(ModArmorMaterial.PLASMA_THREAD, ArmorItem.Type.BOOTS, new Item.Settings())),
 
+    TEAM_RAINBOW_ROCKET_HELMET("team_rainbow_rocket_helmet", new ArmorItem(ModArmorMaterial.RAINBOW_ROCKET_THREAD, ArmorItem.Type.HELMET, new Item.Settings())),
+    TEAM_RAINBOW_ROCKET_CHESTPLATE("team_rainbow_rocket_chestplate", new ArmorItem(ModArmorMaterial.RAINBOW_ROCKET_THREAD, ArmorItem.Type.CHESTPLATE, new Item.Settings())),
+    TEAM_RAINBOW_ROCKET_LEGGINGS("team_rainbow_rocket_leggings", new ArmorItem(ModArmorMaterial.RAINBOW_ROCKET_THREAD, ArmorItem.Type.LEGGINGS, new Item.Settings())),
+    TEAM_RAINBOW_ROCKET_BOOTS("team_rainbow_rocket_boots", new ArmorItem(ModArmorMaterial.RAINBOW_ROCKET_THREAD, ArmorItem.Type.BOOTS, new Item.Settings())),
+
+    TEAM_NEO_PLASMA_HELMET("team_neo_plasma_helmet", new ArmorItem(ModArmorMaterial.NEO_PLASMA_THREAD, ArmorItem.Type.HELMET, new Item.Settings())),
+    TEAM_NEO_PLASMA_CHESTPLATE("team_neo_plasma_chestplate", new ArmorItem(ModArmorMaterial.NEO_PLASMA_THREAD, ArmorItem.Type.CHESTPLATE, new Item.Settings())),
+    TEAM_NEO_PLASMA_LEGGINGS("team_neo_plasma_leggings", new ArmorItem(ModArmorMaterial.NEO_PLASMA_THREAD, ArmorItem.Type.LEGGINGS, new Item.Settings())),
+    TEAM_NEO_PLASMA_BOOTS("team_neo_plasma_boots", new ArmorItem(ModArmorMaterial.NEO_PLASMA_THREAD, ArmorItem.Type.BOOTS, new Item.Settings())),
+
     PIKACHU_HELMET("pikachu_helmet", new PikachuArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings())),
     MAGIKARP_HELMET("magikarp_helmet", new MagikarpArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings())),
     FENNEKIN_HELMET("fennekin_helmet", new FennekinArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings())),

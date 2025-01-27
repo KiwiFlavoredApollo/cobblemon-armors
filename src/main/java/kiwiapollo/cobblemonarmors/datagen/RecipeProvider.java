@@ -139,6 +139,66 @@ public class RecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModArmorMaterialItem.PLASMA_THREAD.getItem()), FabricRecipeProvider.conditionsFromItem(ModArmorMaterialItem.PLASMA_THREAD.getItem()))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_RAINBOW_ROCKET_HELMET.getItem())
+                .pattern("MMM")
+                .pattern("M M")
+                .input('M', ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem())
+                .criterion(FabricRecipeProvider.hasItem(ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem()), FabricRecipeProvider.conditionsFromItem(ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem()))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_RAINBOW_ROCKET_CHESTPLATE.getItem())
+                .pattern("M M")
+                .pattern("MMM")
+                .pattern("MMM")
+                .input('M', ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem())
+                .criterion(FabricRecipeProvider.hasItem(ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem()), FabricRecipeProvider.conditionsFromItem(ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem()))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_RAINBOW_ROCKET_LEGGINGS.getItem())
+                .pattern("MMM")
+                .pattern("M M")
+                .pattern("M M")
+                .input('M', ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem())
+                .criterion(FabricRecipeProvider.hasItem(ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem()), FabricRecipeProvider.conditionsFromItem(ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem()))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_RAINBOW_ROCKET_BOOTS.getItem())
+                .pattern("M M")
+                .pattern("M M")
+                .input('M', ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem())
+                .criterion(FabricRecipeProvider.hasItem(ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem()), FabricRecipeProvider.conditionsFromItem(ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem()))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_NEO_PLASMA_HELMET.getItem())
+                .pattern("MMM")
+                .pattern("M M")
+                .input('M', ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem())
+                .criterion(FabricRecipeProvider.hasItem(ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem()), FabricRecipeProvider.conditionsFromItem(ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem()))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_NEO_PLASMA_CHESTPLATE.getItem())
+                .pattern("M M")
+                .pattern("MMM")
+                .pattern("MMM")
+                .input('M', ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem())
+                .criterion(FabricRecipeProvider.hasItem(ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem()), FabricRecipeProvider.conditionsFromItem(ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem()))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_NEO_PLASMA_LEGGINGS.getItem())
+                .pattern("MMM")
+                .pattern("M M")
+                .pattern("M M")
+                .input('M', ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem())
+                .criterion(FabricRecipeProvider.hasItem(ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem()), FabricRecipeProvider.conditionsFromItem(ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem()))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_NEO_PLASMA_BOOTS.getItem())
+                .pattern("M M")
+                .pattern("M M")
+                .input('M', ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem())
+                .criterion(FabricRecipeProvider.hasItem(ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem()), FabricRecipeProvider.conditionsFromItem(ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem()))
+                .offerTo(exporter);
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorMaterialItem.AQUA_THREAD.getItem())
                 .input(Items.SEA_PICKLE)
                 .input(Items.STRING)
@@ -162,6 +222,22 @@ public class RecipeProvider extends FabricRecipeProvider {
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorMaterialItem.PLASMA_THREAD.getItem())
                 .input(Items.GLOWSTONE_DUST)
+                .input(Items.STRING)
+                .criterion(FabricRecipeProvider.hasItem(Items.SEA_PICKLE), FabricRecipeProvider.conditionsFromItem(Items.SEA_PICKLE))
+                .criterion(FabricRecipeProvider.hasItem(Items.STRING), FabricRecipeProvider.conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorMaterialItem.RAINBOW_ROCKET_THREAD.getItem())
+                .input(Items.RED_DYE)
+                .input(Items.GREEN_DYE)
+                .input(Items.BLUE_DYE)
+                .input(Items.STRING)
+                .criterion(FabricRecipeProvider.hasItem(Items.SEA_PICKLE), FabricRecipeProvider.conditionsFromItem(Items.SEA_PICKLE))
+                .criterion(FabricRecipeProvider.hasItem(Items.STRING), FabricRecipeProvider.conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorMaterialItem.NEO_PLASMA_THREAD.getItem())
+                .input(Items.SUGAR)
                 .input(Items.STRING)
                 .criterion(FabricRecipeProvider.hasItem(Items.SEA_PICKLE), FabricRecipeProvider.conditionsFromItem(Items.SEA_PICKLE))
                 .criterion(FabricRecipeProvider.hasItem(Items.STRING), FabricRecipeProvider.conditionsFromItem(Items.STRING))
