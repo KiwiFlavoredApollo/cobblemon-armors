@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_string": {
+    "has_neo_plasma_thread": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:string"
+              "cobblemonarmors:neo_plasma_thread"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "cobblemonarmors:magma_thread"
+        "recipe": "cobblemonarmors:team_neo_plasma_helmet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_string",
+      "has_neo_plasma_thread",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "cobblemonarmors:magma_thread"
+      "cobblemonarmors:team_neo_plasma_helmet"
     ]
   },
   "sends_telemetry_event": false

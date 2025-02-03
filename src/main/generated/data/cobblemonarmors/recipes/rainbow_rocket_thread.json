@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:red_dye"
+    },
+    {
+      "item": "minecraft:green_dye"
+    },
+    {
+      "item": "minecraft:blue_dye"
+    },
+    {
+      "item": "cobblemonarmors:rainbow_rocket_thread"
+    }
+  ],
+  "result": {
+    "item": "cobblemonarmors:rainbow_rocket_thread"
+  }
+}

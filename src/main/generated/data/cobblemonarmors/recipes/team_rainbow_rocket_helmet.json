@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "cobblemonarmors:rainbow_rocket_thread"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "M M"
+  ],
+  "result": {
+    "item": "cobblemonarmors:team_rainbow_rocket_helmet"
+  },
+  "show_notification": true
+}

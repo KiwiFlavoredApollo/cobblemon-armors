@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "cobblemonarmors:rainbow_rocket_thread"
+    }
+  },
+  "pattern": [
+    "M M",
+    "MMM",
+    "MMM"
+  ],
+  "result": {
+    "item": "cobblemonarmors:team_rainbow_rocket_chestplate"
+  },
+  "show_notification": true
+}
