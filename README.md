@@ -29,7 +29,20 @@ Gives Resistance when the player is wearing the full set of Team Rocket Armor wi
 1. Have at least one Poison-type Pokémon
 2. Does not have any Psychic-type Pokémon
 
+## Team Rainbow Rocket
+
+Gives Resistance when the player is wearing the full set of Team Rocket Armor with following conditions:
+
+1. Have Fire-type, Grass-type and Water-type Pokémon
+
 ## Team Plasma
+
+Gives Resistance when the player is wearing the full set of Team Rocket Armor with following conditions:
+
+1. Have at least one Electric-type Pokémon
+2. Does not have any Ground-type Pokémon
+
+## Team Neo Plasma
 
 Gives Resistance when the player is wearing the full set of Team Rocket Armor with following conditions:
 
@@ -45,6 +58,8 @@ Gives Resistance when the player is wearing the full set of Team Rocket Armor wi
 
 - [Mik ཀརྨ ঌ](https://discordapp.com/users/449068348727230465)
   - Team Plasma Armor
+  - Team Neo Plasma Armor
+  - Team Rainbow Rocket Armor
 
 ## LICENSE
 - GPL 3.0 for source codes
