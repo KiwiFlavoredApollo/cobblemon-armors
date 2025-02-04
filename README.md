@@ -31,20 +31,20 @@ Gives Resistance when the player is wearing the full set of Team Rocket Armor wi
 
 ## Team Rainbow Rocket
 
-Gives Resistance when the player is wearing the full set of Team Rocket Armor with following conditions:
+Gives Night Vision when the player is wearing the full set of Team Rainbow Rocket Armor with following conditions:
 
 1. Have Fire-type, Grass-type and Water-type Pokémon
 
 ## Team Plasma
 
-Gives Resistance when the player is wearing the full set of Team Rocket Armor with following conditions:
+Gives Haste when the player is wearing the full set of Team Plasma Armor with following conditions:
 
 1. Have at least one Electric-type Pokémon
 2. Does not have any Ground-type Pokémon
 
 ## Team Neo Plasma
 
-Gives Resistance when the player is wearing the full set of Team Rocket Armor with following conditions:
+Gives Haste when the player is wearing the full set of Team Neo Plasma Armor with following conditions:
 
 1. Have at least one Electric-type Pokémon
 2. Does not have any Ground-type Pokémon
