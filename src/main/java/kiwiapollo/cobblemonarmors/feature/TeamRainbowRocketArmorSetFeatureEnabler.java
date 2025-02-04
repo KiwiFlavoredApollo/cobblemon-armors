@@ -5,7 +5,7 @@ import kiwiapollo.cobblemonarmors.armor.ModArmorItem;
 import kiwiapollo.cobblemonarmors.predicate.ForbiddenPokemonTypePredicate;
 import kiwiapollo.cobblemonarmors.predicate.RequiredPokemonTypePredicate;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -31,8 +31,8 @@ public class TeamRainbowRocketArmorSetFeatureEnabler extends ArmorSetFeatureEnab
             new ForbiddenPokemonTypePredicate(List.of())
     );
 
-    private static final List<StatusEffectInstance> EFFECTS = List.of(
-            new StatusEffectInstance(StatusEffects.NIGHT_VISION, 220, 0, false, false, true)
+    private static final List<StatusEffect> EFFECTS = List.of(
+        StatusEffects.NIGHT_VISION
     );
 
     public TeamRainbowRocketArmorSetFeatureEnabler() {

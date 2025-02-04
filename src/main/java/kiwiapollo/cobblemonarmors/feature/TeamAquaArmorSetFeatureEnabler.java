@@ -5,6 +5,7 @@ import kiwiapollo.cobblemonarmors.armor.ModArmorItem;
 import kiwiapollo.cobblemonarmors.predicate.ForbiddenPokemonTypePredicate;
 import kiwiapollo.cobblemonarmors.predicate.RequiredPokemonTypePredicate;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ArmorItem;
@@ -26,8 +27,8 @@ public class TeamAquaArmorSetFeatureEnabler extends ArmorSetFeatureEnabler {
             new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getFIRE()))
     );
 
-    private static final List<StatusEffectInstance> EFFECTS = List.of(
-            new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 220, 0, false, false, true)
+    private static final List<StatusEffect> EFFECTS = List.of(
+            StatusEffects.DOLPHINS_GRACE
     );
 
     public TeamAquaArmorSetFeatureEnabler() {

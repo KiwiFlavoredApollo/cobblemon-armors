@@ -2,6 +2,7 @@ package kiwiapollo.cobblemonarmors.feature;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -13,11 +14,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
 
-public abstract class ArmorSetFeatureEnabler implements ServerTickEvents.EndTick {private final Map<EquipmentSlot, ArmorItem> armorSet;
-    private final List<Predicate<ServerPlayerEntity>> predicates;
-    private final List<StatusEffectInstance> effects;
+public abstract class ArmorSetFeatureEnabler implements ServerTickEvents.EndTick {
+    private static final int DURATION = 220;
 
-    protected ArmorSetFeatureEnabler(Map<EquipmentSlot, ArmorItem> armorSet, List<Predicate<ServerPlayerEntity>> predicates, List<StatusEffectInstance> effects) {
+    private final Map<EquipmentSlot, ArmorItem> armorSet;
+    private final List<Predicate<ServerPlayerEntity>> predicates;
+    private final List<StatusEffect> effects;
+
+    protected ArmorSetFeatureEnabler(Map<EquipmentSlot, ArmorItem> armorSet, List<Predicate<ServerPlayerEntity>> predicates, List<StatusEffect> effects) {
         this.armorSet = armorSet;
         this.predicates = predicates;
         this.effects = effects;
@@ -34,7 +38,9 @@ public abstract class ArmorSetFeatureEnabler implements ServerTickEvents.EndTick
                 return;
             }
 
-            new StatusEffectInstanceCloneFactory(effects).create().forEach(player::addStatusEffect);
+            for (StatusEffect effect : effects) {
+                player.addStatusEffect(new StatusEffectInstance(effect, DURATION, 0, false, false, true));
+            }
         }
     }
 
@@ -46,31 +52,5 @@ public abstract class ArmorSetFeatureEnabler implements ServerTickEvents.EndTick
             Item equipped = player.getEquippedStack(slot).getItem();
             return equipped.equals(armor);
         });
-    }
-
-    static class StatusEffectInstanceCloneFactory implements SimpleFactory<List<StatusEffectInstance>> {
-        private final List<StatusEffectInstance> effects;
-
-        StatusEffectInstanceCloneFactory(List<StatusEffectInstance> effects) {
-            this.effects = effects;
-        }
-
-        @Override
-        public List<StatusEffectInstance> create() {
-            List<StatusEffectInstance> clone = new ArrayList<>();
-
-            for (StatusEffectInstance e : effects) {
-                clone.add(new StatusEffectInstance(
-                        e.getEffectType(),
-                        e.getDuration(),
-                        e.getAmplifier(),
-                        e.isAmbient(),
-                        e.shouldShowParticles(),
-                        e.shouldShowIcon()
-                ));
-            }
-
-            return clone;
-        }
     }
 }
