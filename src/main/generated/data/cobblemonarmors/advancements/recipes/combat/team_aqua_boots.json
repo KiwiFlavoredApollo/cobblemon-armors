@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_aqua_thread": {
+    "has_prismarine_shard": {
       "conditions": {
         "items": [
           {
             "items": [
-              "cobblemonarmors:aqua_thread"
+              "minecraft:prismarine_shard"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_aqua_thread",
+      "has_prismarine_shard",
       "has_the_recipe"
     ]
   ],

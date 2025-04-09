@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_magma_thread": {
+    "has_magma_cream": {
       "conditions": {
         "items": [
           {
             "items": [
-              "cobblemonarmors:magma_thread"
+              "minecraft:magma_cream"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_magma_thread",
+      "has_magma_cream",
       "has_the_recipe"
     ]
   ],

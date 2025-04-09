@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rocket_thread": {
+    "has_gunpowder": {
       "conditions": {
         "items": [
           {
             "items": [
-              "cobblemonarmors:rocket_thread"
+              "minecraft:gunpowder"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_rocket_thread",
+      "has_gunpowder",
       "has_the_recipe"
     ]
   ],

@@ -1,18 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "equipment",
-  "key": {
-    "M": {
-      "item": "cobblemonarmors:magma_thread"
+  "ingredients": [
+    {
+      "item": "minecraft:leather_leggings"
+    },
+    {
+      "item": "minecraft:magma_cream"
     }
-  },
-  "pattern": [
-    "MMM",
-    "M M",
-    "M M"
   ],
   "result": {
     "item": "cobblemonarmors:team_magma_leggings"
-  },
-  "show_notification": true
+  }
 }

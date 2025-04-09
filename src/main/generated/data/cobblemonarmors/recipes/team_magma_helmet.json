@@ -1,17 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "equipment",
-  "key": {
-    "M": {
-      "item": "cobblemonarmors:magma_thread"
+  "ingredients": [
+    {
+      "item": "minecraft:leather_helmet"
+    },
+    {
+      "item": "minecraft:magma_cream"
     }
-  },
-  "pattern": [
-    "MMM",
-    "M M"
   ],
   "result": {
     "item": "cobblemonarmors:team_magma_helmet"
-  },
-  "show_notification": true
+  }
 }
