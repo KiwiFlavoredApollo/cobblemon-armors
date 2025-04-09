@@ -3,7 +3,6 @@ package kiwiapollo.cobblemonarmors.material;
 import kiwiapollo.cobblemonarmors.CobblemonArmors;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.Registries;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
@@ -15,66 +14,76 @@ import java.util.EnumMap;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements StringIdentifiable, ArmorMaterial {
-    AQUA_THREAD("team_aqua", 5,
+    TEAM_ROCKET("team_rocket", 5,
             Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 1);
                 map.put(ArmorItem.Type.LEGGINGS, 2);
                 map.put(ArmorItem.Type.CHESTPLATE, 3);
                 map.put(ArmorItem.Type.HELMET, 1);
             }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "aqua_thread")));
-    }),
-    MAGMA_THREAD("team_magma", 5,
+            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+            () -> Ingredient.ofItems(Items.LEATHER)
+    ),
+    TEAM_AQUA("team_aqua", 5,
             Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 1);
                 map.put(ArmorItem.Type.LEGGINGS, 2);
                 map.put(ArmorItem.Type.CHESTPLATE, 3);
                 map.put(ArmorItem.Type.HELMET, 1);
             }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "magma_thread")));
-    }),
-    ROCKET_THREAD("team_rocket", 5,
+            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+            () -> Ingredient.ofItems(Items.LEATHER)
+    ),
+    TEAM_MAGMA("team_magma", 5,
             Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 1);
                 map.put(ArmorItem.Type.LEGGINGS, 2);
                 map.put(ArmorItem.Type.CHESTPLATE, 3);
                 map.put(ArmorItem.Type.HELMET, 1);
             }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "rocket_thread")));
-    }),
-    PLASMA_THREAD("team_plasma", 5,
+            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+            () -> Ingredient.ofItems(Items.LEATHER)
+    ),
+    TEAM_GALACTIC("team_galactic", 5,
             Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 1);
                 map.put(ArmorItem.Type.LEGGINGS, 2);
                 map.put(ArmorItem.Type.CHESTPLATE, 3);
                 map.put(ArmorItem.Type.HELMET, 1);
             }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "plasma_thread")));
-    }),
-    RAINBOW_ROCKET_THREAD("team_rainbow_rocket", 5,
+            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+            () -> Ingredient.ofItems(Items.LEATHER)
+    ),
+    WHITE_TEAM_PLASMA("white_team_plasma", 5,
             Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 1);
                 map.put(ArmorItem.Type.LEGGINGS, 2);
                 map.put(ArmorItem.Type.CHESTPLATE, 3);
                 map.put(ArmorItem.Type.HELMET, 1);
             }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "rainbow_rocket_thread")));
-    }),
-    NEO_PLASMA_THREAD("team_neo_plasma", 5,
+            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+            () -> Ingredient.ofItems(Items.LEATHER)
+    ),
+    BLACK_TEAM_PLASMA("black_team_plasma", 5,
             Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
                 map.put(ArmorItem.Type.BOOTS, 1);
                 map.put(ArmorItem.Type.LEGGINGS, 2);
                 map.put(ArmorItem.Type.CHESTPLATE, 3);
                 map.put(ArmorItem.Type.HELMET, 1);
             }),
-            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
-        return Ingredient.ofItems(Registries.ITEM.get(Identifier.of(CobblemonArmors.NAMESPACE, "neo_plasma_thread")));
-    });
+            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+            () -> Ingredient.ofItems(Items.LEATHER)
+    ),
+    TEAM_RAINBOW_ROCKET("team_rainbow_rocket", 5,
+            Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+                map.put(ArmorItem.Type.BOOTS, 1);
+                map.put(ArmorItem.Type.LEGGINGS, 2);
+                map.put(ArmorItem.Type.CHESTPLATE, 3);
+                map.put(ArmorItem.Type.HELMET, 1);
+            }),
+            15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
+            () -> Ingredient.ofItems(Items.LEATHER)
+    );
 
     public static final StringIdentifiable.Codec<net.minecraft.item.ArmorMaterials> CODEC =
             StringIdentifiable.createCodec(net.minecraft.item.ArmorMaterials::values);
