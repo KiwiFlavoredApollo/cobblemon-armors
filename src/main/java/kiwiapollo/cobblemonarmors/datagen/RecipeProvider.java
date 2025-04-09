@@ -13,11 +13,12 @@ public class RecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        new TeamAquaRecipeProvider(output).generate(exporter);
-        new TeamMagmaRecipeProvider(output).generate(exporter);
-        new TeamRocketRecipeProvider(output).generate(exporter);
-        new TeamPlasmaRecipeProvider(output).generate(exporter);
-        new TeamRainbowRocketRecipeProvider(output).generate(exporter);
-        new TeamNeoPlasmaRecipeProvider(output).generate(exporter);
+        new TeamRocketArmorRecipeProvider(output).generate(exporter);
+        new TeamAquaArmorRecipeProvider(output).generate(exporter);
+        new TeamMagmaArmorRecipeProvider(output).generate(exporter);
+        new TeamGalacticArmorRecipeProvider(output).generate(exporter);
+        new WhiteTeamPlasmaArmorRecipeProvider(output).generate(exporter);
+        new BlackTeamPlasmaArmorRecipeProvider(output).generate(exporter);
+        new TeamRainbowRocketArmorRecipeProvider(output).generate(exporter);
     }
 }

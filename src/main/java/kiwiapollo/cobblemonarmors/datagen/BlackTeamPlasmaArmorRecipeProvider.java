@@ -1,0 +1,48 @@
+package kiwiapollo.cobblemonarmors.datagen;
+
+import kiwiapollo.cobblemonarmors.armor.ModArmorItem;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Items;
+import net.minecraft.recipe.book.RecipeCategory;
+
+import java.util.function.Consumer;
+
+public class BlackTeamPlasmaArmorRecipeProvider extends FabricRecipeProvider {
+    public BlackTeamPlasmaArmorRecipeProvider(FabricDataOutput output) {
+        super(output);
+    }
+
+    @Override
+    public void generate(Consumer<RecipeJsonProvider> exporter) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.BLACK_TEAM_PLASMA_HELMET.getItem())
+                .input(Items.LEATHER_HELMET)
+                .input(Items.PHANTOM_MEMBRANE)
+                .input(Items.COAL)
+                .criterion(FabricRecipeProvider.hasItem(Items.PHANTOM_MEMBRANE), FabricRecipeProvider.conditionsFromItem(Items.PHANTOM_MEMBRANE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.BLACK_TEAM_PLASMA_CHESTPLATE.getItem())
+                .input(Items.LEATHER_CHESTPLATE)
+                .input(Items.PHANTOM_MEMBRANE)
+                .input(Items.COAL)
+                .criterion(FabricRecipeProvider.hasItem(Items.PHANTOM_MEMBRANE), FabricRecipeProvider.conditionsFromItem(Items.PHANTOM_MEMBRANE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.BLACK_TEAM_PLASMA_LEGGINGS.getItem())
+                .input(Items.LEATHER_LEGGINGS)
+                .input(Items.PHANTOM_MEMBRANE)
+                .input(Items.COAL)
+                .criterion(FabricRecipeProvider.hasItem(Items.PHANTOM_MEMBRANE), FabricRecipeProvider.conditionsFromItem(Items.PHANTOM_MEMBRANE))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.BLACK_TEAM_PLASMA_BOOTS.getItem())
+                .input(Items.LEATHER_BOOTS)
+                .input(Items.PHANTOM_MEMBRANE)
+                .input(Items.COAL)
+                .criterion(FabricRecipeProvider.hasItem(Items.PHANTOM_MEMBRANE), FabricRecipeProvider.conditionsFromItem(Items.PHANTOM_MEMBRANE))
+                .offerTo(exporter);
+    }
+}
