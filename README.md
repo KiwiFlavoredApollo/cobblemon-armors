@@ -1,6 +1,12 @@
 # README
 
+## Armors
+
 Please refer to Modrinth Gallery
+
+## Recipes
+
+Please refer to [Github](https://github.com/KiwiFlavoredApollo/cobblemon-armors/tree/master/src/main/generated/data/cobblemonarmors/recipes). Mods like EMI is highly recommended.
 
 ## Credit
 
