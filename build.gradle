@@ -70,9 +70,6 @@ dependencies {
 
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 
-	modCompileOnly("com.cobblemon:mod:${project.cobblemon_version}")
-	modRuntimeOnly("com.cobblemon:fabric:${project.cobblemon_version}")
-
 	modImplementation("net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}")
 	modImplementation("software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}")
 	implementation("com.eliotlash.mclib:mclib:20")
