@@ -1,10 +1,8 @@
 {
-  "item.cobblemonarmors.aqua_thread": "Aqua Thread",
-  "item.cobblemonarmors.magma_thread": "Magma Thread",
-  "item.cobblemonarmors.rocket_thread": "Rocket Thread",
-  "item.cobblemonarmors.plasma_thread": "Plasma Thread",
-  "item.cobblemonarmors.rainbow_rocket_thread": "Rainbow Rocket Thread",
-  "item.cobblemonarmors.neo_plasma_thread": "Neo Plasma Thread",
+  "item.cobblemonarmors.team_rocket_helmet": "Team Rocket Helmet",
+  "item.cobblemonarmors.team_rocket_chestplate": "Team Rocket Chestplate",
+  "item.cobblemonarmors.team_rocket_leggings": "Team Rocket Leggings",
+  "item.cobblemonarmors.team_rocket_boots": "Team Rocket Boots",
   
   "item.cobblemonarmors.team_aqua_helmet": "Team Aqua Helmet",
   "item.cobblemonarmors.team_aqua_chestplate": "Team Aqua Chestplate",
@@ -15,29 +13,36 @@
   "item.cobblemonarmors.team_magma_chestplate": "Team Magma Chestplate",
   "item.cobblemonarmors.team_magma_leggings": "Team Magma Leggings",
   "item.cobblemonarmors.team_magma_boots": "Team Magma Boots",
+
+  "item.cobblemonarmors.team_galactic_helmet": "Team Galactic Helmet",
+  "item.cobblemonarmors.team_galactic_chestplate": "Team Galactic Chestplate",
+  "item.cobblemonarmors.team_galactic_leggings": "Team Galactic Leggings",
+  "item.cobblemonarmors.team_galactic_boots": "Team Galactic Boots",
+
+  "item.cobblemonarmors.white_team_plasma_helmet": "White Team Plasma Helmet",
+  "item.cobblemonarmors.white_team_plasma_chestplate": "White Team Plasma Chestplate",
+  "item.cobblemonarmors.white_team_plasma_leggings": "White Team Plasma Leggings",
+  "item.cobblemonarmors.white_team_plasma_boots": "White Team Plasma Boots",
+
+  "item.cobblemonarmors.black_team_plasma_helmet": "Black Team Plasma Helmet",
+  "item.cobblemonarmors.black_team_plasma_chestplate": "Black Team Plasma Chestplate",
+  "item.cobblemonarmors.black_team_plasma_leggings": "Black Team Plasma Leggings",
+  "item.cobblemonarmors.black_team_plasma_boots": "Black Team Plasma Boots",
   
-  "item.cobblemonarmors.team_rocket_helmet": "Team Rocket Helmet",
-  "item.cobblemonarmors.team_rocket_chestplate": "Team Rocket Chestplate",
-  "item.cobblemonarmors.team_rocket_leggings": "Team Rocket Leggings",
-  "item.cobblemonarmors.team_rocket_boots": "Team Rocket Boots",
-
-  "item.cobblemonarmors.team_plasma_helmet": "Team Plasma Helmet",
-  "item.cobblemonarmors.team_plasma_chestplate": "Team Plasma Chestplate",
-  "item.cobblemonarmors.team_plasma_leggings": "Team Plasma Leggings",
-  "item.cobblemonarmors.team_plasma_boots": "Team Plasma Boots",
-
   "item.cobblemonarmors.team_rainbow_rocket_helmet": "Team Rainbow Rocket Helmet",
   "item.cobblemonarmors.team_rainbow_rocket_chestplate": "Team Rainbow Rocket Chestplate",
   "item.cobblemonarmors.team_rainbow_rocket_leggings": "Team Rainbow Rocket Leggings",
   "item.cobblemonarmors.team_rainbow_rocket_boots": "Team Rainbow Rocket Boots",
-
-  "item.cobblemonarmors.team_neo_plasma_helmet": "Team Neo Plasma Helmet",
-  "item.cobblemonarmors.team_neo_plasma_chestplate": "Team Neo Plasma Chestplate",
-  "item.cobblemonarmors.team_neo_plasma_leggings": "Team Neo Plasma Leggings",
-  "item.cobblemonarmors.team_neo_plasma_boots": "Team Neo Plasma Boots",
+  
+  "item.cobblemonarmors.pikachu_helmet": "Pikachu Hat",
+  "item.cobblemonarmors.magikarp_helmet": "Magikarp Hat",
+  "item.cobblemonarmors.slowking_helmet": "Slowking Hat",
+  "item.cobblemonarmors.dawn_helmet": "Dawn Hat",
+  "item.cobblemonarmors.lyra_helmet": "Lyra Hat",
   
   "item.cobblemonarmors.fennekin_helmet": "Fennekin Hairband",
   "item.cobblemonarmors.fennekin_chestplate": "Fennekin Tail",
-  "item.cobblemonarmors.pikachu_helmet": "Pikachu Hat",
-  "item.cobblemonarmors.magikarp_helmet": "Magikarp Helmet"
+
+  "item.cobblemonarmors.butterfree_helmet": "Butterfree Helmet",
+  "item.cobblemonarmors.butterfree_chestplate": "Butterfree Wings"
 }
