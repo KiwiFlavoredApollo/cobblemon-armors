@@ -1,10 +1,7 @@
 package kiwiapollo.cobblemonarmors;
 
 import kiwiapollo.cobblemonarmors.armor.*;
-import kiwiapollo.cobblemonarmors.feature.*;
-import kiwiapollo.cobblemonarmors.material.ModArmorMaterialItem;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
@@ -32,33 +29,16 @@ public class CobblemonArmors implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		Arrays.stream(ModArmorMaterialItem.values()).forEach(material -> {
-			Registry.register(Registries.ITEM, material.getIdentifier(), material.getItem());
-		});
-
 		Arrays.stream(ModArmorItem.values()).forEach(armor -> {
 			Registry.register(Registries.ITEM, armor.getIdentifier(), armor.getItem());
 		});
 
 		Registry.register(Registries.ITEM_GROUP, COBBLEMON_ARMOR_ITEM_GROUP_KEY, COBBLEMON_ARMOR_ITEM_GROUP);
 
-		Arrays.stream(ModArmorMaterialItem.values()).forEach(material -> {
-			ItemGroupEvents.modifyEntriesEvent(COBBLEMON_ARMOR_ITEM_GROUP_KEY).register(itemGroup -> {
-				itemGroup.add(material.getItem());
-			});
-		});
-
 		Arrays.stream(ModArmorItem.values()).forEach(armor -> {
 			ItemGroupEvents.modifyEntriesEvent(COBBLEMON_ARMOR_ITEM_GROUP_KEY).register(itemGroup -> {
 				itemGroup.add(armor.getItem());
 			});
 		});
-
-		ServerTickEvents.END_SERVER_TICK.register(new TeamAquaArmorSetFeatureEnabler());
-		ServerTickEvents.END_SERVER_TICK.register(new TeamMagmaArmorSetFeatureEnabler());
-		ServerTickEvents.END_SERVER_TICK.register(new TeamRocketArmorSetFeatureEnabler());
-		ServerTickEvents.END_SERVER_TICK.register(new TeamPlasmaArmorSetFeatureEnabler());
-		ServerTickEvents.END_SERVER_TICK.register(new TeamRainbowRocketArmorSetFeatureEnabler());
-		ServerTickEvents.END_SERVER_TICK.register(new TeamNeoPlasmaArmorSetFeatureEnabler());
 	}
 }
