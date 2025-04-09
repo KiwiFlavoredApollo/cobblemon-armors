@@ -48,8 +48,10 @@ public enum ModArmorItem {
     SLOWKING_HELMET("slowking_helmet", new SlowkingArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings())),
     DAWN_HELMET("dawn_helmet", new DawnArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings())),
     LYRA_HELMET("lyra_helmet", new LyraArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings())),
+
     FENNEKIN_HELMET("fennekin_helmet", new FennekinArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings())),
     FENNEKIN_CHESTPLATE("fennekin_chestplate", new FennekinArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.CHESTPLATE, new Item.Settings())),
+
     BUTTERFREE_HELMET("butterfree_helmet", new ButterfreeArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings())),
     BUTTERFREE_CHESTPLATE("butterfree_chestplate", new ButterfreeArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
 
