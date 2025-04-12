@@ -21,5 +21,10 @@ Please refer to [Github](https://github.com/KiwiFlavoredApollo/cobblemon-armors/
   - Team Rainbow Rocket Armor
 
 ## LICENSE
-- GPL 3.0 for source codes
-- Creative Commons Attribution-NonCommercial for assets 
+
+### GPL 3.0 
+- Source Code
+
+### CC BY-NC-SA 4.0
+- Translations
+- Item Textures
