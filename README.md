@@ -1,5 +1,9 @@
 # README
 
+## !!! IMPORTANT !!!
+
+Starting from 1.5.0, the armor set features are removed.
+
 ## Armors
 
 Please refer to Modrinth Gallery
