@@ -3,9 +3,9 @@
 	"id": "cobblemonarmors",
 	"version": "${version}",
 	"name": "Cobblemon Armors",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Cobblemon side mod that adds new set of armors",
 	"authors": [
-		"Me!"
+		"KiwiFlavoredApollo"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
