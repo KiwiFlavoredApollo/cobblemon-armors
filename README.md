@@ -2,7 +2,7 @@
 
 ## !!! IMPORTANT !!!
 
-The armor set features are added again. [Cobblemon Armors Feature](https://modrinth.com/mod/cobblemon-armors-feature) mod is no longer required.
+The armor set features are added again. [Cobblemon Armors Feature](https://modrinth.com/mod/cobblemon-armors-feature) mod is no longer required. `enableArmorSetFeature` game rule is added.
 
 ## Game Rules
 
