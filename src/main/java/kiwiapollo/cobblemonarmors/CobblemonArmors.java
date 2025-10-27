@@ -1,7 +1,10 @@
 package kiwiapollo.cobblemonarmors;
 
 import kiwiapollo.cobblemonarmors.armor.*;
+import kiwiapollo.cobblemonarmors.feature.*;
+import kiwiapollo.cobblemonarmors.gamerule.ModGameRule;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
@@ -29,6 +32,8 @@ public class CobblemonArmors implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModGameRule.register();
+
 		Arrays.stream(ModArmorItem.values()).forEach(armor -> {
 			Registry.register(Registries.ITEM, armor.getIdentifier(), armor.getItem());
 		});
@@ -40,5 +45,13 @@ public class CobblemonArmors implements ModInitializer {
 				itemGroup.add(armor.getItem());
 			});
 		});
+
+		ServerTickEvents.END_SERVER_TICK.register(new TeamRocketArmorSetFeatureEnabler());
+		ServerTickEvents.END_SERVER_TICK.register(new TeamAquaArmorSetFeatureEnabler());
+		ServerTickEvents.END_SERVER_TICK.register(new TeamMagmaArmorSetFeatureEnabler());
+		ServerTickEvents.END_SERVER_TICK.register(new TeamGalacticArmorSetFeatureEnabler());
+		ServerTickEvents.END_SERVER_TICK.register(new WhiteTeamPlasmaArmorSetFeatureEnabler());
+		ServerTickEvents.END_SERVER_TICK.register(new BlackTeamPlasmaArmorSetFeatureEnabler());
+		ServerTickEvents.END_SERVER_TICK.register(new TeamRainbowRocketArmorSetFeatureEnabler());
 	}
 }
