@@ -40,6 +40,9 @@
 		"cobblemon": "1.5.2",
 		"geckolib": "~4.4.0"
 	},
+	"breaks": {
+		"cobblemonarmorsfeature": "*"
+	},
 	"suggests": {
 
 	}
