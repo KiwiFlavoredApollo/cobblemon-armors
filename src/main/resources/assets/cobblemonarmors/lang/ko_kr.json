@@ -1,4 +1,6 @@
 {
+  "gamerule.enableArmorSetFeatures": "Cobblemon Armors의 갑옷 세트 기능을 활성화합니다",
+
   "item.cobblemonarmors.team_rocket_helmet": "로켓단 모자",
   "item.cobblemonarmors.team_rocket_chestplate": "로켓단 조끼",
   "item.cobblemonarmors.team_rocket_leggings": "로켓단 바지",
