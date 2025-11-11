@@ -31,7 +31,7 @@ public abstract class ArmorSetFeatureEnabler implements ServerTickEvents.EndTick
 
     @Override
     public void onEndTick(MinecraftServer server) {
-        if (!server.getGameRules().getBoolean(ModGameRule.ENABLE_COBBLEMON_ARMORS_FEATURE)) {
+        if (!server.getGameRules().getBoolean(ModGameRule.ENABLE_ARMOR_SET_FEATURE)) {
             return;
         }
 

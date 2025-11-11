@@ -1,5 +1,5 @@
 {
-  "gamerule.enableCobblemonArmorsFeature": "Enable armor set features from Cobblemon Armors",
+  "gamerule.enableArmorSetFeature": "Enable armor set features from Cobblemon Armors",
 
   "item.cobblemonarmors.team_rocket_helmet": "Team Rocket Helmet",
   "item.cobblemonarmors.team_rocket_chestplate": "Team Rocket Chestplate",
