@@ -23,9 +23,9 @@ public class CobblemonArmors implements ModInitializer {
 	public static final String NAMESPACE = "cobblemonarmors";
 	public static final Logger LOGGER = LoggerFactory.getLogger(NAMESPACE);
 
-	public static final RegistryKey<ItemGroup> COBBLEMON_ARMOR_ITEM_GROUP_KEY =
+	public static final RegistryKey<ItemGroup> COBBLEMON_ARMORS_ITEM_GROUP_KEY =
 			RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(NAMESPACE, "item_group"));
-	public static final ItemGroup COBBLEMON_ARMOR_ITEM_GROUP = FabricItemGroup.builder()
+	public static final ItemGroup COBBLEMON_ARMORS_ITEM_GROUP = FabricItemGroup.builder()
 			.icon(() -> new ItemStack(Registries.ITEM.get(Identifier.of(NAMESPACE, "fennekin_chestplate"))))
 			.displayName(Text.translatable("Cobblemon Armors"))
 			.build();
@@ -38,10 +38,10 @@ public class CobblemonArmors implements ModInitializer {
 			Registry.register(Registries.ITEM, armor.getIdentifier(), armor.getItem());
 		});
 
-		Registry.register(Registries.ITEM_GROUP, COBBLEMON_ARMOR_ITEM_GROUP_KEY, COBBLEMON_ARMOR_ITEM_GROUP);
+		Registry.register(Registries.ITEM_GROUP, COBBLEMON_ARMORS_ITEM_GROUP_KEY, COBBLEMON_ARMORS_ITEM_GROUP);
 
 		Arrays.stream(ModArmorItem.values()).forEach(armor -> {
-			ItemGroupEvents.modifyEntriesEvent(COBBLEMON_ARMOR_ITEM_GROUP_KEY).register(itemGroup -> {
+			ItemGroupEvents.modifyEntriesEvent(COBBLEMON_ARMORS_ITEM_GROUP_KEY).register(itemGroup -> {
 				itemGroup.add(armor.getItem());
 			});
 		});
