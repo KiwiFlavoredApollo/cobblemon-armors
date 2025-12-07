@@ -30,10 +30,8 @@ public class TeamRainbowRocketArmorItem {
     public static final Item TEAM_RAINBOW_ROCKET_LEGGINGS = register("team_rainbow_rocket_leggings", new TeamRainbowRocketArmor.Leggings());
     public static final Item TEAM_RAINBOW_ROCKET_BOOTS = register("team_rainbow_rocket_boots", new TeamRainbowRocketArmor.Boots());
 
-    private static final ArmorSetFeature ARMOR_SET_FEATURE = new ArmorSetFeatureFactory().create();
-
     public static void initialize() {
-        ServerTickEvents.END_SERVER_TICK.register(ARMOR_SET_FEATURE);
+        ServerTickEvents.END_SERVER_TICK.register(new TeamRainbowRocketArmorSetFeature());
     }
 
     private static Item register(String name, Item item) {
@@ -46,31 +44,5 @@ public class TeamRainbowRocketArmorItem {
 
     public static List<Item> getAll() {
         return new ArrayList<>(all);
-    }
-
-    private static class ArmorSetFeatureFactory {
-        private static final Map<EquipmentSlot, Item> ARMOR_SET = Map.ofEntries(
-                Map.entry(EquipmentSlot.HEAD, TeamRainbowRocketArmorItem.TEAM_RAINBOW_ROCKET_HELMET),
-                Map.entry(EquipmentSlot.CHEST, TeamRainbowRocketArmorItem.TEAM_RAINBOW_ROCKET_CHESTPLATE),
-                Map.entry(EquipmentSlot.LEGS, TeamRainbowRocketArmorItem.TEAM_RAINBOW_ROCKET_LEGGINGS),
-                Map.entry(EquipmentSlot.FEET, TeamRainbowRocketArmorItem.TEAM_RAINBOW_ROCKET_BOOTS)
-        );
-
-        private static final List<Predicate<ServerPlayerEntity>> PREDICATES = List.of(
-                new RequiredPokemonTypePredicate(List.of(
-                        ElementalTypes.INSTANCE.getFIRE(),
-                        ElementalTypes.INSTANCE.getWATER(),
-                        ElementalTypes.INSTANCE.getGRASS()
-                )),
-                new ForbiddenPokemonTypePredicate(List.of())
-        );
-
-        private static final List<StatusEffect> EFFECTS = List.of(
-                StatusEffects.NIGHT_VISION
-        );
-
-        public ArmorSetFeature create() {
-            return new ArmorSetFeature(ARMOR_SET, PREDICATES, EFFECTS);
-        }
     }
 }

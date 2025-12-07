@@ -30,10 +30,8 @@ public class TeamGalacticArmorItem {
     public static final Item TEAM_GALACTIC_LEGGINGS = register("team_galactic_leggings", new TeamGalacticArmor.Leggings());
     public static final Item TEAM_GALACTIC_BOOTS = register("team_galactic_boots", new TeamGalacticArmor.Boots());
 
-    private static final ArmorSetFeature ARMOR_SET_FEATURE = new ArmorSetFeatureFactory().create();
-
     public static void initialize() {
-        ServerTickEvents.END_SERVER_TICK.register(ARMOR_SET_FEATURE);
+        ServerTickEvents.END_SERVER_TICK.register(new TeamGalacticArmorSetFeature());
     }
 
     private static Item register(String name, Item item) {
@@ -46,30 +44,5 @@ public class TeamGalacticArmorItem {
 
     public static List<Item> getAll() {
         return new ArrayList<>(all);
-    }
-
-    private static class ArmorSetFeatureFactory {
-        private static final Map<EquipmentSlot, Item> ARMOR_SET = Map.ofEntries(
-                Map.entry(EquipmentSlot.HEAD, TeamGalacticArmorItem.TEAM_GALACTIC_HELMET),
-                Map.entry(EquipmentSlot.CHEST, TeamGalacticArmorItem.TEAM_GALACTIC_CHESTPLATE),
-                Map.entry(EquipmentSlot.LEGS, TeamGalacticArmorItem.TEAM_GALACTIC_LEGGINGS),
-                Map.entry(EquipmentSlot.FEET, TeamGalacticArmorItem.TEAM_GALACTIC_BOOTS)
-        );
-
-        private static final List<Predicate<ServerPlayerEntity>> PREDICATES = List.of(
-                new RequiredPokemonTypePredicate(List.of(
-                        ElementalTypes.INSTANCE.getWATER(),
-                        ElementalTypes.INSTANCE.getSTEEL()
-                )),
-                new ForbiddenPokemonTypePredicate(List.of())
-        );
-
-        private static final List<StatusEffect> EFFECTS = List.of(
-                StatusEffects.JUMP_BOOST
-        );
-
-        public ArmorSetFeature create() {
-            return new ArmorSetFeature(ARMOR_SET, PREDICATES, EFFECTS);
-        }
     }
 }

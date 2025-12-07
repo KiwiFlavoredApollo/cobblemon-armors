@@ -30,10 +30,8 @@ public class TeamAquaArmorItem {
     public static final Item TEAM_AQUA_LEGGINGS = register("team_aqua_leggings", new TeamAquaArmor.Leggings());
     public static final Item TEAM_AQUA_BOOTS = register("team_aqua_boots", new TeamAquaArmor.Boots());
 
-    private static final ArmorSetFeature ARMOR_SET_FEATURE = new ArmorSetFeatureFactory().create();
-
     public static void initialize() {
-        ServerTickEvents.END_SERVER_TICK.register(ARMOR_SET_FEATURE);
+        ServerTickEvents.END_SERVER_TICK.register(new TeamAquaArmorSetFeature());
     }
 
     private static Item register(String name, Item item) {
@@ -46,27 +44,5 @@ public class TeamAquaArmorItem {
 
     public static List<Item> getAll() {
         return new ArrayList<>(all);
-    }
-
-    private static class ArmorSetFeatureFactory {
-        private static final Map<EquipmentSlot, Item> ARMOR_SET = Map.ofEntries(
-                Map.entry(EquipmentSlot.HEAD, TeamAquaArmorItem.TEAM_AQUA_HELMET),
-                Map.entry(EquipmentSlot.CHEST, TeamAquaArmorItem.TEAM_AQUA_CHESTPLATE),
-                Map.entry(EquipmentSlot.LEGS, TeamAquaArmorItem.TEAM_AQUA_LEGGINGS),
-                Map.entry(EquipmentSlot.FEET, TeamAquaArmorItem.TEAM_AQUA_BOOTS)
-        );
-
-        private static final List<Predicate<ServerPlayerEntity>> PREDICATES = List.of(
-                new RequiredPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getWATER())),
-                new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getFIRE()))
-        );
-
-        private static final List<StatusEffect> EFFECTS = List.of(
-                StatusEffects.DOLPHINS_GRACE
-        );
-
-        public ArmorSetFeature create() {
-            return new ArmorSetFeature(ARMOR_SET, PREDICATES, EFFECTS);
-        }
     }
 }

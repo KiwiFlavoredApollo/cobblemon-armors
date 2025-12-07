@@ -30,10 +30,8 @@ public class WhiteTeamPlasmaArmorItem {
     public static final Item WHITE_TEAM_PLASMA_LEGGINGS = register("white_team_plasma_leggings", new WhiteTeamPlasmaArmor.Leggings());
     public static final Item WHITE_TEAM_PLASMA_BOOTS = register("white_team_plasma_boots", new WhiteTeamPlasmaArmor.Boots());
 
-    private static final ArmorSetFeature ARMOR_SET_FEATURE = new ArmorSetFeatureFactory().create();
-
     public static void initialize() {
-        ServerTickEvents.END_SERVER_TICK.register(ARMOR_SET_FEATURE);
+        ServerTickEvents.END_SERVER_TICK.register(new WhiteTeamPlasmaArmorSetFeature());
     }
 
     private static Item register(String name, Item item) {
@@ -46,27 +44,5 @@ public class WhiteTeamPlasmaArmorItem {
 
     public static List<Item> getAll() {
         return new ArrayList<>(all);
-    }
-
-    private static class ArmorSetFeatureFactory {
-        private static final Map<EquipmentSlot, Item> ARMOR_SET = Map.ofEntries(
-                Map.entry(EquipmentSlot.HEAD, WhiteTeamPlasmaArmorItem.WHITE_TEAM_PLASMA_HELMET),
-                Map.entry(EquipmentSlot.CHEST, WhiteTeamPlasmaArmorItem.WHITE_TEAM_PLASMA_CHESTPLATE),
-                Map.entry(EquipmentSlot.LEGS, WhiteTeamPlasmaArmorItem.WHITE_TEAM_PLASMA_LEGGINGS),
-                Map.entry(EquipmentSlot.FEET, WhiteTeamPlasmaArmorItem.WHITE_TEAM_PLASMA_BOOTS)
-        );
-
-        private static final List<Predicate<ServerPlayerEntity>> PREDICATES = List.of(
-                new RequiredPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getFIRE())),
-                new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getELECTRIC()))
-        );
-
-        private static final List<StatusEffect> EFFECTS = List.of(
-                StatusEffects.HASTE
-        );
-
-        public ArmorSetFeature create() {
-            return new ArmorSetFeature(ARMOR_SET, PREDICATES, EFFECTS);
-        }
     }
 }
