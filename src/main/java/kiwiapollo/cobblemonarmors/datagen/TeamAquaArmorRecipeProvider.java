@@ -1,6 +1,6 @@
 package kiwiapollo.cobblemonarmors.datagen;
 
-import kiwiapollo.cobblemonarmors.armor.ModArmorItem;
+import kiwiapollo.cobblemonarmors.armor.TeamAquaArmorItem;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
@@ -17,25 +17,25 @@ public class TeamAquaArmorRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_AQUA_HELMET)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, TeamAquaArmorItem.TEAM_AQUA_HELMET)
                 .input(Items.LEATHER_HELMET)
                 .input(Items.PRISMARINE_SHARD)
                 .criterion(FabricRecipeProvider.hasItem(Items.PRISMARINE_SHARD), FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_AQUA_CHESTPLATE)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, TeamAquaArmorItem.TEAM_AQUA_CHESTPLATE)
                 .input(Items.LEATHER_CHESTPLATE)
                 .input(Items.PRISMARINE_SHARD)
                 .criterion(FabricRecipeProvider.hasItem(Items.PRISMARINE_SHARD), FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_AQUA_LEGGINGS)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, TeamAquaArmorItem.TEAM_AQUA_LEGGINGS)
                 .input(Items.LEATHER_LEGGINGS)
                 .input(Items.PRISMARINE_SHARD)
                 .criterion(FabricRecipeProvider.hasItem(Items.PRISMARINE_SHARD), FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_AQUA_BOOTS)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, TeamAquaArmorItem.TEAM_AQUA_BOOTS)
                 .input(Items.LEATHER_BOOTS)
                 .input(Items.PRISMARINE_SHARD)
                 .criterion(FabricRecipeProvider.hasItem(Items.PRISMARINE_SHARD), FabricRecipeProvider.conditionsFromItem(Items.PRISMARINE_SHARD))

@@ -1,11 +1,10 @@
-package kiwiapollo.cobblemonarmors.feature;
+package kiwiapollo.cobblemonarmors.armor;
 
 import kiwiapollo.cobblemonarmors.gamerule.ModGameRule;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -16,14 +15,14 @@ import java.util.function.Predicate;
 
 import static net.minecraft.SharedConstants.TICKS_PER_SECOND;
 
-public abstract class ArmorSetFeatureEnabler implements ServerTickEvents.EndTick {
+public class ArmorSetFeature implements ServerTickEvents.EndTick {
     private static final int DURATION_IN_SECONDS = 11;
 
     private final Map<EquipmentSlot, Item> armorSet;
     private final List<Predicate<ServerPlayerEntity>> predicates;
     private final List<StatusEffect> effects;
 
-    protected ArmorSetFeatureEnabler(Map<EquipmentSlot, Item> armorSet, List<Predicate<ServerPlayerEntity>> predicates, List<StatusEffect> effects) {
+    protected ArmorSetFeature(Map<EquipmentSlot, Item> armorSet, List<Predicate<ServerPlayerEntity>> predicates, List<StatusEffect> effects) {
         this.armorSet = armorSet;
         this.predicates = predicates;
         this.effects = effects;

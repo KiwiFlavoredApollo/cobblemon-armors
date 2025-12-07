@@ -1,4 +1,4 @@
-package kiwiapollo.cobblemonarmors.material;
+package kiwiapollo.cobblemonarmors.armor;
 
 import kiwiapollo.cobblemonarmors.CobblemonArmors;
 import net.minecraft.item.*;

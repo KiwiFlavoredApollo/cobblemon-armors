@@ -1,7 +1,6 @@
 package kiwiapollo.cobblemonarmors;
 
 import kiwiapollo.cobblemonarmors.armor.*;
-import kiwiapollo.cobblemonarmors.feature.*;
 import kiwiapollo.cobblemonarmors.gamerule.ModGameRule;
 import net.fabricmc.api.ModInitializer;
 
@@ -12,9 +11,15 @@ public class CobblemonArmors implements ModInitializer {
 	public void onInitialize() {
 		ModGameRule.initialize();
 
-		ModArmorItem.initialize();
-		ModItemGroup.initialize();
+		TeamRocketArmorItem.initialize();
+		TeamAquaArmorItem.initialize();
+		TeamMagmaArmorItem.initialize();
+		TeamGalacticArmorItem.initialize();
+		WhiteTeamPlasmaArmorItem.initialize();
+		BlackTeamPlasmaArmorItem.initialize();
+		TeamRainbowRocketArmorItem.initialize();
+		MiscArmorItem.initialize();
 
-		ArmorSetFeature.initialize();
+		ModItemGroup.initialize();
 	}
 }
