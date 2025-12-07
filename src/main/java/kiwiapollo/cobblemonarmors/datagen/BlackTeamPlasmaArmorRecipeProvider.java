@@ -17,28 +17,28 @@ public class BlackTeamPlasmaArmorRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.BLACK_TEAM_PLASMA_HELMET.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.BLACK_TEAM_PLASMA_HELMET)
                 .input(Items.LEATHER_HELMET)
                 .input(Items.PHANTOM_MEMBRANE)
                 .input(Items.COAL)
                 .criterion(FabricRecipeProvider.hasItem(Items.PHANTOM_MEMBRANE), FabricRecipeProvider.conditionsFromItem(Items.PHANTOM_MEMBRANE))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.BLACK_TEAM_PLASMA_CHESTPLATE.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.BLACK_TEAM_PLASMA_CHESTPLATE)
                 .input(Items.LEATHER_CHESTPLATE)
                 .input(Items.PHANTOM_MEMBRANE)
                 .input(Items.COAL)
                 .criterion(FabricRecipeProvider.hasItem(Items.PHANTOM_MEMBRANE), FabricRecipeProvider.conditionsFromItem(Items.PHANTOM_MEMBRANE))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.BLACK_TEAM_PLASMA_LEGGINGS.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.BLACK_TEAM_PLASMA_LEGGINGS)
                 .input(Items.LEATHER_LEGGINGS)
                 .input(Items.PHANTOM_MEMBRANE)
                 .input(Items.COAL)
                 .criterion(FabricRecipeProvider.hasItem(Items.PHANTOM_MEMBRANE), FabricRecipeProvider.conditionsFromItem(Items.PHANTOM_MEMBRANE))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.BLACK_TEAM_PLASMA_BOOTS.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.BLACK_TEAM_PLASMA_BOOTS)
                 .input(Items.LEATHER_BOOTS)
                 .input(Items.PHANTOM_MEMBRANE)
                 .input(Items.COAL)

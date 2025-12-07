@@ -8,6 +8,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
 import net.minecraft.server.network.ServerPlayerEntity;
 
 import java.util.List;
@@ -15,11 +16,11 @@ import java.util.Map;
 import java.util.function.Predicate;
 
 public class TeamAquaArmorSetFeatureEnabler extends ArmorSetFeatureEnabler {
-    private static final Map<EquipmentSlot, ArmorItem> ARMOR_SET = Map.ofEntries(
-            Map.entry(EquipmentSlot.HEAD, ModArmorItem.TEAM_AQUA_HELMET.getItem()),
-            Map.entry(EquipmentSlot.CHEST, ModArmorItem.TEAM_AQUA_CHESTPLATE.getItem()),
-            Map.entry(EquipmentSlot.LEGS, ModArmorItem.TEAM_AQUA_LEGGINGS.getItem()),
-            Map.entry(EquipmentSlot.FEET, ModArmorItem.TEAM_AQUA_BOOTS.getItem())
+    private static final Map<EquipmentSlot, Item> ARMOR_SET = Map.ofEntries(
+            Map.entry(EquipmentSlot.HEAD, ModArmorItem.TEAM_AQUA_HELMET),
+            Map.entry(EquipmentSlot.CHEST, ModArmorItem.TEAM_AQUA_CHESTPLATE),
+            Map.entry(EquipmentSlot.LEGS, ModArmorItem.TEAM_AQUA_LEGGINGS),
+            Map.entry(EquipmentSlot.FEET, ModArmorItem.TEAM_AQUA_BOOTS)
     );
 
     private static final List<Predicate<ServerPlayerEntity>> PREDICATES = List.of(

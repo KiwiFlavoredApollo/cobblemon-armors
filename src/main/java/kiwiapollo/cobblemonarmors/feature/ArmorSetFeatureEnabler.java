@@ -19,11 +19,11 @@ import static net.minecraft.SharedConstants.TICKS_PER_SECOND;
 public abstract class ArmorSetFeatureEnabler implements ServerTickEvents.EndTick {
     private static final int DURATION_IN_SECONDS = 11;
 
-    private final Map<EquipmentSlot, ArmorItem> armorSet;
+    private final Map<EquipmentSlot, Item> armorSet;
     private final List<Predicate<ServerPlayerEntity>> predicates;
     private final List<StatusEffect> effects;
 
-    protected ArmorSetFeatureEnabler(Map<EquipmentSlot, ArmorItem> armorSet, List<Predicate<ServerPlayerEntity>> predicates, List<StatusEffect> effects) {
+    protected ArmorSetFeatureEnabler(Map<EquipmentSlot, Item> armorSet, List<Predicate<ServerPlayerEntity>> predicates, List<StatusEffect> effects) {
         this.armorSet = armorSet;
         this.predicates = predicates;
         this.effects = effects;
@@ -54,10 +54,10 @@ public abstract class ArmorSetFeatureEnabler implements ServerTickEvents.EndTick
         return TICKS_PER_SECOND * DURATION_IN_SECONDS;
     }
 
-    private boolean isPlayerWearingArmorSet(ServerPlayerEntity player, Map<EquipmentSlot, ArmorItem> armorSet) {
+    private boolean isPlayerWearingArmorSet(ServerPlayerEntity player, Map<EquipmentSlot, Item> armorSet) {
         return armorSet.entrySet().stream().allMatch(entry -> {
             EquipmentSlot slot = entry.getKey();
-            ArmorItem armor = entry.getValue();
+            Item armor = entry.getValue();
 
             Item equipped = player.getEquippedStack(slot).getItem();
             return equipped.equals(armor);

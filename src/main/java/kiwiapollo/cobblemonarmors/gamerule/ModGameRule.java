@@ -7,7 +7,11 @@ import net.minecraft.world.GameRules;
 public class ModGameRule {
     public static GameRules.Key<GameRules.BooleanRule> ENABLE_ARMOR_SET_FEATURE;
 
-    public static void register() {
+    public static void initialize() {
+        register();
+    }
+
+    private static void register() {
         ENABLE_ARMOR_SET_FEATURE = GameRuleRegistry.register("enableArmorSetFeature", GameRules.Category.MISC, GameRuleFactory.createBooleanRule(false));
     }
 }

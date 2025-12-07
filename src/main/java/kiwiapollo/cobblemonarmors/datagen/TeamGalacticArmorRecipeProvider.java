@@ -17,25 +17,25 @@ public class TeamGalacticArmorRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_GALACTIC_HELMET.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_GALACTIC_HELMET)
                 .input(Items.LEATHER_HELMET)
                 .input(Items.ENDER_PEARL)
                 .criterion(FabricRecipeProvider.hasItem(Items.ENDER_PEARL), FabricRecipeProvider.conditionsFromItem(Items.ENDER_PEARL))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_GALACTIC_CHESTPLATE.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_GALACTIC_CHESTPLATE)
                 .input(Items.LEATHER_CHESTPLATE)
                 .input(Items.ENDER_PEARL)
                 .criterion(FabricRecipeProvider.hasItem(Items.ENDER_PEARL), FabricRecipeProvider.conditionsFromItem(Items.ENDER_PEARL))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_GALACTIC_LEGGINGS.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_GALACTIC_LEGGINGS)
                 .input(Items.LEATHER_LEGGINGS)
                 .input(Items.ENDER_PEARL)
                 .criterion(FabricRecipeProvider.hasItem(Items.ENDER_PEARL), FabricRecipeProvider.conditionsFromItem(Items.ENDER_PEARL))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_GALACTIC_BOOTS.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_GALACTIC_BOOTS)
                 .input(Items.LEATHER_BOOTS)
                 .input(Items.ENDER_PEARL)
                 .criterion(FabricRecipeProvider.hasItem(Items.ENDER_PEARL), FabricRecipeProvider.conditionsFromItem(Items.ENDER_PEARL))

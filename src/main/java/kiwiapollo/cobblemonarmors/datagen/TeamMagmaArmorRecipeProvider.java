@@ -17,25 +17,25 @@ public class TeamMagmaArmorRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_MAGMA_HELMET.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_MAGMA_HELMET)
                 .input(Items.LEATHER_HELMET)
                 .input(Items.MAGMA_CREAM)
                 .criterion(FabricRecipeProvider.hasItem(Items.MAGMA_CREAM), FabricRecipeProvider.conditionsFromItem(Items.MAGMA_CREAM))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_MAGMA_CHESTPLATE.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_MAGMA_CHESTPLATE)
                 .input(Items.LEATHER_CHESTPLATE)
                 .input(Items.MAGMA_CREAM)
                 .criterion(FabricRecipeProvider.hasItem(Items.MAGMA_CREAM), FabricRecipeProvider.conditionsFromItem(Items.MAGMA_CREAM))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_MAGMA_LEGGINGS.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_MAGMA_LEGGINGS)
                 .input(Items.LEATHER_LEGGINGS)
                 .input(Items.MAGMA_CREAM)
                 .criterion(FabricRecipeProvider.hasItem(Items.MAGMA_CREAM), FabricRecipeProvider.conditionsFromItem(Items.MAGMA_CREAM))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_MAGMA_BOOTS.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_MAGMA_BOOTS)
                 .input(Items.LEATHER_BOOTS)
                 .input(Items.MAGMA_CREAM)
                 .criterion(FabricRecipeProvider.hasItem(Items.MAGMA_CREAM), FabricRecipeProvider.conditionsFromItem(Items.MAGMA_CREAM))

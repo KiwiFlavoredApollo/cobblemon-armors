@@ -22,7 +22,7 @@ public abstract class CustomModelArmorItem extends ArmorItem implements GeoItem 
 
     public CustomModelArmorItem(ArmorMaterial material, Type type, Settings settings, String path) {
         super(material, type, settings);
-        this.model = new DefaultedItemGeoModel<>(Identifier.of(CobblemonArmors.NAMESPACE, path));
+        this.model = new DefaultedItemGeoModel<>(Identifier.of(CobblemonArmors.MOD_ID, path));
     }
 
     @Override

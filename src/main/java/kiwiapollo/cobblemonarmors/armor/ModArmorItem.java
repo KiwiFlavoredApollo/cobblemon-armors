@@ -2,69 +2,77 @@ package kiwiapollo.cobblemonarmors.armor;
 
 import kiwiapollo.cobblemonarmors.CobblemonArmors;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public enum ModArmorItem {
-    TEAM_ROCKET_HELMET("team_rocket_helmet", new TeamRocketArmorItem.Helmet()),
-    TEAM_ROCKET_CHESTPLATE("team_rocket_chestplate", new TeamRocketArmorItem.Chestplate()),
-    TEAM_ROCKET_LEGGINGS("team_rocket_leggings", new TeamRocketArmorItem.Leggings()),
-    TEAM_ROCKET_BOOTS("team_rocket_boots", new TeamRocketArmorItem.Boots()),
+import java.util.ArrayList;
+import java.util.List;
 
-    TEAM_AQUA_HELMET("team_aqua_helmet", new TeamAquaArmorItem.Helmet()),
-    TEAM_AQUA_CHESTPLATE("team_aqua_chestplate", new TeamAquaArmorItem.Chestplate()),
-    TEAM_AQUA_LEGGINGS("team_aqua_leggings", new TeamAquaArmorItem.Leggings()),
-    TEAM_AQUA_BOOTS("team_aqua_boots", new TeamAquaArmorItem.Boots()),
+public class ModArmorItem {
+    private static final List<Item> all = new ArrayList<>();
 
-    TEAM_MAGMA_HELMET("team_magma_helmet", new TeamMagmaArmorItem.Helmet()),
-    TEAM_MAGMA_CHESTPLATE("team_magma_chestplate", new TeamMagmaArmorItem.Chestplate()),
-    TEAM_MAGMA_LEGGINGS("team_magma_leggings", new TeamMagmaArmorItem.Leggings()),
-    TEAM_MAGMA_BOOTS("team_magma_boots", new TeamMagmaArmorItem.Boots()),
+    public static final Item TEAM_ROCKET_HELMET = register("team_rocket_helmet", new TeamRocketArmorItem.Helmet());
+    public static final Item TEAM_ROCKET_CHESTPLATE = register("team_rocket_chestplate", new TeamRocketArmorItem.Chestplate());
+    public static final Item TEAM_ROCKET_LEGGINGS = register("team_rocket_leggings", new TeamRocketArmorItem.Leggings());
+    public static final Item TEAM_ROCKET_BOOTS = register("team_rocket_boots", new TeamRocketArmorItem.Boots());
 
-    TEAM_GALACTIC_HELMET("team_galactic_helmet", new TeamGalacticArmorItem.Helmet()),
-    TEAM_GALACTIC_CHESTPLATE("team_galactic_chestplate", new TeamGalacticArmorItem.Chestplate()),
-    TEAM_GALACTIC_LEGGINGS("team_galactic_leggings", new TeamGalacticArmorItem.Leggings()),
-    TEAM_GALACTIC_BOOTS("team_galactic_boots", new TeamGalacticArmorItem.Boots()),
+    public static final Item TEAM_AQUA_HELMET = register("team_aqua_helmet", new TeamAquaArmorItem.Helmet());
+    public static final Item TEAM_AQUA_CHESTPLATE = register("team_aqua_chestplate", new TeamAquaArmorItem.Chestplate());
+    public static final Item TEAM_AQUA_LEGGINGS = register("team_aqua_leggings", new TeamAquaArmorItem.Leggings());
+    public static final Item TEAM_AQUA_BOOTS = register("team_aqua_boots", new TeamAquaArmorItem.Boots());
 
-    WHITE_TEAM_PLASMA_HELMET("white_team_plasma_helmet", new WhiteTeamPlasmaArmorItem.Helmet()),
-    WHITE_TEAM_PLASMA_CHESTPLATE("white_team_plasma_chestplate", new WhiteTeamPlasmaArmorItem.Chestplate()),
-    WHITE_TEAM_PLASMA_LEGGINGS("white_team_plasma_leggings", new WhiteTeamPlasmaArmorItem.Leggings()),
-    WHITE_TEAM_PLASMA_BOOTS("white_team_plasma_boots", new WhiteTeamPlasmaArmorItem.Boots()),
+    public static final Item TEAM_MAGMA_HELMET = register("team_magma_helmet", new TeamMagmaArmorItem.Helmet());
+    public static final Item TEAM_MAGMA_CHESTPLATE = register("team_magma_chestplate", new TeamMagmaArmorItem.Chestplate());
+    public static final Item TEAM_MAGMA_LEGGINGS = register("team_magma_leggings", new TeamMagmaArmorItem.Leggings());
+    public static final Item TEAM_MAGMA_BOOTS = register("team_magma_boots", new TeamMagmaArmorItem.Boots());
 
-    BLACK_TEAM_PLASMA_HELMET("black_team_plasma_helmet", new BlackTeamPlasmaArmorItem.Helmet()),
-    BLACK_TEAM_PLASMA_CHESTPLATE("black_team_plasma_chestplate", new BlackTeamPlasmaArmorItem.Chestplate()),
-    BLACK_TEAM_PLASMA_LEGGINGS("black_team_plasma_leggings", new BlackTeamPlasmaArmorItem.Leggings()),
-    BLACK_TEAM_PLASMA_BOOTS("black_team_plasma_boots", new BlackTeamPlasmaArmorItem.Boots()),
+    public static final Item TEAM_GALACTIC_HELMET = register("team_galactic_helmet", new TeamGalacticArmorItem.Helmet());
+    public static final Item TEAM_GALACTIC_CHESTPLATE = register("team_galactic_chestplate", new TeamGalacticArmorItem.Chestplate());
+    public static final Item TEAM_GALACTIC_LEGGINGS = register("team_galactic_leggings", new TeamGalacticArmorItem.Leggings());
+    public static final Item TEAM_GALACTIC_BOOTS = register("team_galactic_boots", new TeamGalacticArmorItem.Boots());
 
-    TEAM_RAINBOW_ROCKET_HELMET("team_rainbow_rocket_helmet", new TeamRainbowRocketArmorItem.Helmet()),
-    TEAM_RAINBOW_ROCKET_CHESTPLATE("team_rainbow_rocket_chestplate", new TeamRainbowRocketArmorItem.Chestplate()),
-    TEAM_RAINBOW_ROCKET_LEGGINGS("team_rainbow_rocket_leggings", new TeamRainbowRocketArmorItem.Leggings()),
-    TEAM_RAINBOW_ROCKET_BOOTS("team_rainbow_rocket_boots", new TeamRainbowRocketArmorItem.Boots()),
+    public static final Item WHITE_TEAM_PLASMA_HELMET = register("white_team_plasma_helmet", new WhiteTeamPlasmaArmorItem.Helmet());
+    public static final Item WHITE_TEAM_PLASMA_CHESTPLATE = register("white_team_plasma_chestplate", new WhiteTeamPlasmaArmorItem.Chestplate());
+    public static final Item WHITE_TEAM_PLASMA_LEGGINGS = register("white_team_plasma_leggings", new WhiteTeamPlasmaArmorItem.Leggings());
+    public static final Item WHITE_TEAM_PLASMA_BOOTS = register("white_team_plasma_boots", new WhiteTeamPlasmaArmorItem.Boots());
 
-    PIKACHU_HELMET("pikachu_helmet", new PikachuArmorItem.Helmet()),
-    MAGIKARP_HELMET("magikarp_helmet", new MagikarpArmorItem.Helmet()),
-    SLOWKING_HELMET("slowking_helmet", new SlowkingArmorItem.Helmet()),
-    DAWN_HELMET("dawn_helmet", new DawnArmorItem.Helmet()),
-    LYRA_HELMET("lyra_helmet", new LyraArmorItem.Helmet()),
+    public static final Item BLACK_TEAM_PLASMA_HELMET = register("black_team_plasma_helmet", new BlackTeamPlasmaArmorItem.Helmet());
+    public static final Item BLACK_TEAM_PLASMA_CHESTPLATE = register("black_team_plasma_chestplate", new BlackTeamPlasmaArmorItem.Chestplate());
+    public static final Item BLACK_TEAM_PLASMA_LEGGINGS = register("black_team_plasma_leggings", new BlackTeamPlasmaArmorItem.Leggings());
+    public static final Item BLACK_TEAM_PLASMA_BOOTS = register("black_team_plasma_boots", new BlackTeamPlasmaArmorItem.Boots());
 
-    FENNEKIN_HELMET("fennekin_helmet", new FennekinArmorItem.Helmet()),
-    FENNEKIN_CHESTPLATE("fennekin_chestplate", new FennekinArmorItem.Chestplate()),
+    public static final Item TEAM_RAINBOW_ROCKET_HELMET = register("team_rainbow_rocket_helmet", new TeamRainbowRocketArmorItem.Helmet());
+    public static final Item TEAM_RAINBOW_ROCKET_CHESTPLATE = register("team_rainbow_rocket_chestplate", new TeamRainbowRocketArmorItem.Chestplate());
+    public static final Item TEAM_RAINBOW_ROCKET_LEGGINGS = register("team_rainbow_rocket_leggings", new TeamRainbowRocketArmorItem.Leggings());
+    public static final Item TEAM_RAINBOW_ROCKET_BOOTS = register("team_rainbow_rocket_boots", new TeamRainbowRocketArmorItem.Boots());
 
-    BUTTERFREE_HELMET("butterfree_helmet", new ButterfreeArmorItem.Helmet()),
-    BUTTERFREE_CHESTPLATE("butterfree_chestplate", new ButterfreeArmorItem.Chestplate());
+    public static final Item PIKACHU_HELMET = register("pikachu_helmet", new PikachuArmorItem.Helmet());
+    public static final Item MAGIKARP_HELMET = register("magikarp_helmet", new MagikarpArmorItem.Helmet());
+    public static final Item SLOWKING_HELMET = register("slowking_helmet", new SlowkingArmorItem.Helmet());
+    public static final Item DAWN_HELMET = register("dawn_helmet", new DawnArmorItem.Helmet());
+    public static final Item LYRA_HELMET = register("lyra_helmet", new LyraArmorItem.Helmet());
 
-    private final Identifier identifier;
-    private final ArmorItem item;
+    public static final Item FENNEKIN_HELMET = register("fennekin_helmet", new FennekinArmorItem.Helmet());
+    public static final Item FENNEKIN_CHESTPLATE = register("fennekin_chestplate", new FennekinArmorItem.Chestplate());
 
-    ModArmorItem(String path, ArmorItem item) {
-        this.identifier = Identifier.of(CobblemonArmors.NAMESPACE, path);
-        this.item = item;
+    public static final Item BUTTERFREE_HELMET = register("butterfree_helmet", new ButterfreeArmorItem.Helmet());
+    public static final Item BUTTERFREE_CHESTPLATE = register("butterfree_chestplate", new ButterfreeArmorItem.Chestplate());
+
+    public static void initialize() {
+
     }
 
-    public Identifier getIdentifier() {
-        return identifier;
+    private static Item register(String name, Item item) {
+        Identifier identifier = Identifier.of(CobblemonArmors.MOD_ID, name);
+        Item i = Registry.register(Registries.ITEM, identifier, item);
+        all.add(i);
+
+        return i;
     }
 
-    public ArmorItem getItem() {
-        return item;
+    public static List<Item> getAll() {
+        return new ArrayList<>(all);
     }
 }

@@ -17,25 +17,25 @@ public class TeamRocketArmorRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_ROCKET_HELMET.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_ROCKET_HELMET)
                 .input(Items.LEATHER_HELMET)
                 .input(Items.GUNPOWDER)
                 .criterion(FabricRecipeProvider.hasItem(Items.GUNPOWDER), FabricRecipeProvider.conditionsFromItem(Items.GUNPOWDER))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_ROCKET_CHESTPLATE.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_ROCKET_CHESTPLATE)
                 .input(Items.LEATHER_CHESTPLATE)
                 .input(Items.GUNPOWDER)
                 .criterion(FabricRecipeProvider.hasItem(Items.GUNPOWDER), FabricRecipeProvider.conditionsFromItem(Items.GUNPOWDER))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_ROCKET_LEGGINGS.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_ROCKET_LEGGINGS)
                 .input(Items.LEATHER_LEGGINGS)
                 .input(Items.GUNPOWDER)
                 .criterion(FabricRecipeProvider.hasItem(Items.GUNPOWDER), FabricRecipeProvider.conditionsFromItem(Items.GUNPOWDER))
                 .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_ROCKET_BOOTS.getItem())
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModArmorItem.TEAM_ROCKET_BOOTS)
                 .input(Items.LEATHER_BOOTS)
                 .input(Items.GUNPOWDER)
                 .criterion(FabricRecipeProvider.hasItem(Items.GUNPOWDER), FabricRecipeProvider.conditionsFromItem(Items.GUNPOWDER))

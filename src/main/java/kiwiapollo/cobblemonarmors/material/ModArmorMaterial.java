@@ -142,7 +142,7 @@ public enum ModArmorMaterial implements StringIdentifiable, ArmorMaterial {
     }
 
     public String getName() {
-        return Identifier.of(CobblemonArmors.NAMESPACE, this.name).toString();
+        return Identifier.of(CobblemonArmors.MOD_ID, this.name).toString();
     }
 
     public float getToughness() {
