@@ -1,7 +1,9 @@
-package kiwiapollo.cobblemonarmors.armor;
+package kiwiapollo.cobblemonarmors.armor.galactic;
 
 import com.cobblemon.mod.common.api.types.ElementalTypes;
 import kiwiapollo.cobblemonarmors.CobblemonArmors;
+import kiwiapollo.cobblemonarmors.armor.ArmorSetFeature;
+import kiwiapollo.cobblemonarmors.armor.ModArmorMaterial;
 import kiwiapollo.cobblemonarmors.predicate.ForbiddenPokemonTypePredicate;
 import kiwiapollo.cobblemonarmors.predicate.RequiredPokemonTypePredicate;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -20,13 +22,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
 
-public class TeamRocketArmorItem {
+public class TeamGalacticArmorItem {
     private static final List<Item> all = new ArrayList<>();
 
-    public static final Item TEAM_ROCKET_HELMET = register("team_rocket_helmet", new Helmet());
-    public static final Item TEAM_ROCKET_CHESTPLATE = register("team_rocket_chestplate", new Chestplate());
-    public static final Item TEAM_ROCKET_LEGGINGS = register("team_rocket_leggings", new Leggings());
-    public static final Item TEAM_ROCKET_BOOTS = register("team_rocket_boots", new Boots());
+    public static final Item TEAM_GALACTIC_HELMET = register("team_galactic_helmet", new TeamGalacticArmor.Helmet());
+    public static final Item TEAM_GALACTIC_CHESTPLATE = register("team_galactic_chestplate", new TeamGalacticArmor.Chestplate());
+    public static final Item TEAM_GALACTIC_LEGGINGS = register("team_galactic_leggings", new TeamGalacticArmor.Leggings());
+    public static final Item TEAM_GALACTIC_BOOTS = register("team_galactic_boots", new TeamGalacticArmor.Boots());
 
     private static final ArmorSetFeature ARMOR_SET_FEATURE = new ArmorSetFeatureFactory().create();
 
@@ -46,45 +48,24 @@ public class TeamRocketArmorItem {
         return new ArrayList<>(all);
     }
 
-    private static class Helmet extends ArmorItem {
-        public Helmet() {
-            super(ModArmorMaterial.TEAM_ROCKET, Type.HELMET, new Item.Settings());
-        }
-    }
-
-    private static class Chestplate extends ArmorItem {
-        public Chestplate() {
-            super(ModArmorMaterial.TEAM_ROCKET, Type.CHESTPLATE, new Item.Settings());
-        }
-    }
-
-    private static class Leggings extends ArmorItem {
-        public Leggings() {
-            super(ModArmorMaterial.TEAM_ROCKET, Type.LEGGINGS, new Item.Settings());
-        }
-    }
-
-    private static class Boots extends ArmorItem {
-        public Boots() {
-            super(ModArmorMaterial.TEAM_ROCKET, Type.BOOTS, new Item.Settings());
-        }
-    }
-
     private static class ArmorSetFeatureFactory {
         private static final Map<EquipmentSlot, Item> ARMOR_SET = Map.ofEntries(
-                Map.entry(EquipmentSlot.HEAD, TeamRocketArmorItem.TEAM_ROCKET_HELMET),
-                Map.entry(EquipmentSlot.CHEST, TeamRocketArmorItem.TEAM_ROCKET_CHESTPLATE),
-                Map.entry(EquipmentSlot.LEGS, TeamRocketArmorItem.TEAM_ROCKET_LEGGINGS),
-                Map.entry(EquipmentSlot.FEET, TeamRocketArmorItem.TEAM_ROCKET_BOOTS)
+                Map.entry(EquipmentSlot.HEAD, TeamGalacticArmorItem.TEAM_GALACTIC_HELMET),
+                Map.entry(EquipmentSlot.CHEST, TeamGalacticArmorItem.TEAM_GALACTIC_CHESTPLATE),
+                Map.entry(EquipmentSlot.LEGS, TeamGalacticArmorItem.TEAM_GALACTIC_LEGGINGS),
+                Map.entry(EquipmentSlot.FEET, TeamGalacticArmorItem.TEAM_GALACTIC_BOOTS)
         );
 
         private static final List<Predicate<ServerPlayerEntity>> PREDICATES = List.of(
-                new RequiredPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getPOISON())),
-                new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getPSYCHIC()))
+                new RequiredPokemonTypePredicate(List.of(
+                        ElementalTypes.INSTANCE.getWATER(),
+                        ElementalTypes.INSTANCE.getSTEEL()
+                )),
+                new ForbiddenPokemonTypePredicate(List.of())
         );
 
         private static final List<StatusEffect> EFFECTS = List.of(
-                StatusEffects.RESISTANCE
+                StatusEffects.JUMP_BOOST
         );
 
         public ArmorSetFeature create() {

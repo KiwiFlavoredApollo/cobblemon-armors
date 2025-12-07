@@ -1,7 +1,9 @@
-package kiwiapollo.cobblemonarmors.armor;
+package kiwiapollo.cobblemonarmors.armor.magma;
 
 import com.cobblemon.mod.common.api.types.ElementalTypes;
 import kiwiapollo.cobblemonarmors.CobblemonArmors;
+import kiwiapollo.cobblemonarmors.armor.ArmorSetFeature;
+import kiwiapollo.cobblemonarmors.armor.ModArmorMaterial;
 import kiwiapollo.cobblemonarmors.predicate.ForbiddenPokemonTypePredicate;
 import kiwiapollo.cobblemonarmors.predicate.RequiredPokemonTypePredicate;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -20,13 +22,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
 
-public class TeamAquaArmorItem {
+public class TeamMagmaArmorItem {
     private static final List<Item> all = new ArrayList<>();
 
-    public static final Item TEAM_AQUA_HELMET = register("team_aqua_helmet", new Helmet());
-    public static final Item TEAM_AQUA_CHESTPLATE = register("team_aqua_chestplate", new Chestplate());
-    public static final Item TEAM_AQUA_LEGGINGS = register("team_aqua_leggings", new Leggings());
-    public static final Item TEAM_AQUA_BOOTS = register("team_aqua_boots", new Boots());
+    public static final Item TEAM_MAGMA_HELMET = register("team_magma_helmet", new TeamMagmaArmor.Helmet());
+    public static final Item TEAM_MAGMA_CHESTPLATE = register("team_magma_chestplate", new TeamMagmaArmor.Chestplate());
+    public static final Item TEAM_MAGMA_LEGGINGS = register("team_magma_leggings", new TeamMagmaArmor.Leggings());
+    public static final Item TEAM_MAGMA_BOOTS = register("team_magma_boots", new TeamMagmaArmor.Boots());
 
     private static final ArmorSetFeature ARMOR_SET_FEATURE = new ArmorSetFeatureFactory().create();
 
@@ -46,45 +48,21 @@ public class TeamAquaArmorItem {
         return new ArrayList<>(all);
     }
 
-    private static class Helmet extends ArmorItem {
-        public Helmet() {
-            super(ModArmorMaterial.TEAM_AQUA, Type.HELMET, new Settings());
-        }
-    }
-
-    private static class Chestplate extends ArmorItem {
-        public Chestplate() {
-            super(ModArmorMaterial.TEAM_AQUA, Type.CHESTPLATE, new Settings());
-        }
-    }
-
-    private static class Leggings extends ArmorItem {
-        public Leggings() {
-            super(ModArmorMaterial.TEAM_AQUA, Type.LEGGINGS, new Settings());
-        }
-    }
-
-    private static class Boots extends ArmorItem {
-        public Boots() {
-            super(ModArmorMaterial.TEAM_AQUA, Type.BOOTS, new Settings());
-        }
-    }
-
     private static class ArmorSetFeatureFactory {
         private static final Map<EquipmentSlot, Item> ARMOR_SET = Map.ofEntries(
-                Map.entry(EquipmentSlot.HEAD, TeamAquaArmorItem.TEAM_AQUA_HELMET),
-                Map.entry(EquipmentSlot.CHEST, TeamAquaArmorItem.TEAM_AQUA_CHESTPLATE),
-                Map.entry(EquipmentSlot.LEGS, TeamAquaArmorItem.TEAM_AQUA_LEGGINGS),
-                Map.entry(EquipmentSlot.FEET, TeamAquaArmorItem.TEAM_AQUA_BOOTS)
+                Map.entry(EquipmentSlot.HEAD, TeamMagmaArmorItem.TEAM_MAGMA_HELMET),
+                Map.entry(EquipmentSlot.CHEST, TeamMagmaArmorItem.TEAM_MAGMA_CHESTPLATE),
+                Map.entry(EquipmentSlot.LEGS, TeamMagmaArmorItem.TEAM_MAGMA_LEGGINGS),
+                Map.entry(EquipmentSlot.FEET, TeamMagmaArmorItem.TEAM_MAGMA_BOOTS)
         );
 
         private static final List<Predicate<ServerPlayerEntity>> PREDICATES = List.of(
-                new RequiredPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getWATER())),
-                new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getFIRE()))
+                new RequiredPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getFIRE())),
+                new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getWATER()))
         );
 
         private static final List<StatusEffect> EFFECTS = List.of(
-                StatusEffects.DOLPHINS_GRACE
+                StatusEffects.FIRE_RESISTANCE
         );
 
         public ArmorSetFeature create() {

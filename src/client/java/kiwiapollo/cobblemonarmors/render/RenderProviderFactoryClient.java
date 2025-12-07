@@ -1,6 +1,6 @@
 package kiwiapollo.cobblemonarmors.render;
 
-import kiwiapollo.cobblemonarmors.armor.CustomModelArmorItem;
+import kiwiapollo.cobblemonarmors.armor.misc.CustomModelArmorItem;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;

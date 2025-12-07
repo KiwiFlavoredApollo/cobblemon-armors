@@ -1,13 +1,13 @@
-package kiwiapollo.cobblemonarmors.armor;
+package kiwiapollo.cobblemonarmors.armor.misc;
 
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
 
-public class MagikarpArmor {
+public class DawnArmor {
     public static class Helmet extends CustomModelArmorItem {
         public Helmet() {
-            super(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings(), "magikarp_armor");
+            super(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings(), "dawn_armor");
         }
     }
 }

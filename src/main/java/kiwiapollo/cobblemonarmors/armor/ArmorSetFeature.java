@@ -22,7 +22,7 @@ public class ArmorSetFeature implements ServerTickEvents.EndTick {
     private final List<Predicate<ServerPlayerEntity>> predicates;
     private final List<StatusEffect> effects;
 
-    protected ArmorSetFeature(Map<EquipmentSlot, Item> armorSet, List<Predicate<ServerPlayerEntity>> predicates, List<StatusEffect> effects) {
+    public ArmorSetFeature(Map<EquipmentSlot, Item> armorSet, List<Predicate<ServerPlayerEntity>> predicates, List<StatusEffect> effects) {
         this.armorSet = armorSet;
         this.predicates = predicates;
         this.effects = effects;

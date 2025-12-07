@@ -1,13 +1,13 @@
-package kiwiapollo.cobblemonarmors.armor;
+package kiwiapollo.cobblemonarmors.armor.misc;
 
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
 
-public class PikachuArmor {
+public class LyraArmor {
     public static class Helmet extends CustomModelArmorItem {
         public Helmet() {
-            super(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings(), "pikachu_armor");
+            super(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, new Item.Settings(), "lyra_armor");
         }
     }
 }

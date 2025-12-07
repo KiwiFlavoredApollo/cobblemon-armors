@@ -1,6 +1,6 @@
 package kiwiapollo.cobblemonarmors.datagen;
 
-import kiwiapollo.cobblemonarmors.armor.TeamRainbowRocketArmorItem;
+import kiwiapollo.cobblemonarmors.armor.rainbowrocket.TeamRainbowRocketArmorItem;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;

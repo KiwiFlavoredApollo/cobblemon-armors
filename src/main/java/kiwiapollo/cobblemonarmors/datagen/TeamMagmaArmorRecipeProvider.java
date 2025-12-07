@@ -1,6 +1,6 @@
 package kiwiapollo.cobblemonarmors.datagen;
 
-import kiwiapollo.cobblemonarmors.armor.TeamMagmaArmorItem;
+import kiwiapollo.cobblemonarmors.armor.magma.TeamMagmaArmorItem;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;

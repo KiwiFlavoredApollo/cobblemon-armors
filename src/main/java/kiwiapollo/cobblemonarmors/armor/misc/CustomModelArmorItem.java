@@ -1,4 +1,4 @@
-package kiwiapollo.cobblemonarmors.armor;
+package kiwiapollo.cobblemonarmors.armor.misc;
 
 import kiwiapollo.cobblemonarmors.CobblemonArmors;
 import kiwiapollo.cobblemonarmors.render.RenderProviderFactoryProxy;

@@ -1,7 +1,9 @@
-package kiwiapollo.cobblemonarmors.armor;
+package kiwiapollo.cobblemonarmors.armor.blackplasma;
 
 import com.cobblemon.mod.common.api.types.ElementalTypes;
 import kiwiapollo.cobblemonarmors.CobblemonArmors;
+import kiwiapollo.cobblemonarmors.armor.ArmorSetFeature;
+import kiwiapollo.cobblemonarmors.armor.ModArmorMaterial;
 import kiwiapollo.cobblemonarmors.predicate.ForbiddenPokemonTypePredicate;
 import kiwiapollo.cobblemonarmors.predicate.RequiredPokemonTypePredicate;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -20,13 +22,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
 
-public class TeamMagmaArmorItem {
+public class BlackTeamPlasmaArmorItem {
     private static final List<Item> all = new ArrayList<>();
 
-    public static final Item TEAM_MAGMA_HELMET = register("team_magma_helmet", new Helmet());
-    public static final Item TEAM_MAGMA_CHESTPLATE = register("team_magma_chestplate", new Chestplate());
-    public static final Item TEAM_MAGMA_LEGGINGS = register("team_magma_leggings", new Leggings());
-    public static final Item TEAM_MAGMA_BOOTS = register("team_magma_boots", new Boots());
+    public static final Item BLACK_TEAM_PLASMA_HELMET = register("black_team_plasma_helmet", new BlackTeamPlasmaArmor.Helmet());
+    public static final Item BLACK_TEAM_PLASMA_CHESTPLATE = register("black_team_plasma_chestplate", new BlackTeamPlasmaArmor.Chestplate());
+    public static final Item BLACK_TEAM_PLASMA_LEGGINGS = register("black_team_plasma_leggings", new BlackTeamPlasmaArmor.Leggings());
+    public static final Item BLACK_TEAM_PLASMA_BOOTS = register("black_team_plasma_boots", new BlackTeamPlasmaArmor.Boots());
 
     private static final ArmorSetFeature ARMOR_SET_FEATURE = new ArmorSetFeatureFactory().create();
 
@@ -46,45 +48,21 @@ public class TeamMagmaArmorItem {
         return new ArrayList<>(all);
     }
 
-    private static class Helmet extends ArmorItem {
-        public Helmet() {
-            super(ModArmorMaterial.TEAM_MAGMA, Type.HELMET, new Settings());
-        }
-    }
-
-    private static class Chestplate extends ArmorItem {
-        public Chestplate() {
-            super(ModArmorMaterial.TEAM_MAGMA, Type.CHESTPLATE, new Settings());
-        }
-    }
-
-    private static class Leggings extends ArmorItem {
-        public Leggings() {
-            super(ModArmorMaterial.TEAM_MAGMA, Type.LEGGINGS, new Settings());
-        }
-    }
-
-    private static class Boots extends ArmorItem {
-        public Boots() {
-            super(ModArmorMaterial.TEAM_MAGMA, Type.BOOTS, new Settings());
-        }
-    }
-
     private static class ArmorSetFeatureFactory {
         private static final Map<EquipmentSlot, Item> ARMOR_SET = Map.ofEntries(
-                Map.entry(EquipmentSlot.HEAD, TeamMagmaArmorItem.TEAM_MAGMA_HELMET),
-                Map.entry(EquipmentSlot.CHEST, TeamMagmaArmorItem.TEAM_MAGMA_CHESTPLATE),
-                Map.entry(EquipmentSlot.LEGS, TeamMagmaArmorItem.TEAM_MAGMA_LEGGINGS),
-                Map.entry(EquipmentSlot.FEET, TeamMagmaArmorItem.TEAM_MAGMA_BOOTS)
+                Map.entry(EquipmentSlot.HEAD, BlackTeamPlasmaArmorItem.BLACK_TEAM_PLASMA_HELMET),
+                Map.entry(EquipmentSlot.CHEST, BlackTeamPlasmaArmorItem.BLACK_TEAM_PLASMA_CHESTPLATE),
+                Map.entry(EquipmentSlot.LEGS, BlackTeamPlasmaArmorItem.BLACK_TEAM_PLASMA_LEGGINGS),
+                Map.entry(EquipmentSlot.FEET, BlackTeamPlasmaArmorItem.BLACK_TEAM_PLASMA_BOOTS)
         );
 
         private static final List<Predicate<ServerPlayerEntity>> PREDICATES = List.of(
-                new RequiredPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getFIRE())),
-                new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getWATER()))
+                new RequiredPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getELECTRIC())),
+                new ForbiddenPokemonTypePredicate(List.of(ElementalTypes.INSTANCE.getFIRE()))
         );
 
         private static final List<StatusEffect> EFFECTS = List.of(
-                StatusEffects.FIRE_RESISTANCE
+                StatusEffects.HASTE
         );
 
         public ArmorSetFeature create() {
