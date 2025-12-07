@@ -13,6 +13,9 @@ import net.minecraft.util.Util;
 import java.util.EnumMap;
 import java.util.function.Supplier;
 
+/**
+ * @see ArmorMaterials
+ */
 public enum ModArmorMaterial implements StringIdentifiable, ArmorMaterial {
     TEAM_ROCKET("team_rocket", 5,
             Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
