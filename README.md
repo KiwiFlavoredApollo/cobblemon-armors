@@ -47,10 +47,31 @@ If set to `true` (`false` by default), armor set features are enabled.
 - forbids FIRE
 - gives HASTE
 
+### Team Flare
+
+- requires FIRE
+- forbids FAIRY and DARK
+- gives ABSORPTION
+
+### Team Skull
+
+- requires WATER and BUG
+- gives SPEED
+
 ### Team Rainbow Rocket
 
 - requires FIRE and GRASS and WATER
 - gives NIGHT VISION
+
+### Team Yell
+
+- requires DARK
+- gives SATURATION
+
+### Team Star
+
+- requires FIGHTING and ELECTRIC
+- gives LUCK
 
 ## Recipes
 
