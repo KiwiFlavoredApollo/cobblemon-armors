@@ -19,7 +19,11 @@ public class RecipeProvider extends FabricRecipeProvider {
         new TeamGalacticArmorRecipeProvider(output).generate(exporter);
         new WhiteTeamPlasmaArmorRecipeProvider(output).generate(exporter);
         new BlackTeamPlasmaArmorRecipeProvider(output).generate(exporter);
+        new TeamFlareArmorRecipeProvider(output).generate(exporter);
+        new TeamSkullArmorRecipeProvider(output).generate(exporter);
         new TeamRainbowRocketArmorRecipeProvider(output).generate(exporter);
+        new TeamYellArmorRecipeProvider(output).generate(exporter);
+        new TeamStarArmorRecipeProvider(output).generate(exporter);
         new MiscRecipeProvider(output).generate(exporter);
     }
 }
