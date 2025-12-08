@@ -3,12 +3,16 @@ package kiwiapollo.cobblemonarmors.armor;
 import kiwiapollo.cobblemonarmors.CobblemonArmors;
 import kiwiapollo.cobblemonarmors.armor.aqua.TeamAquaArmorItem;
 import kiwiapollo.cobblemonarmors.armor.blackplasma.BlackTeamPlasmaArmorItem;
+import kiwiapollo.cobblemonarmors.armor.flare.TeamFlareArmorItem;
 import kiwiapollo.cobblemonarmors.armor.galactic.TeamGalacticArmorItem;
 import kiwiapollo.cobblemonarmors.armor.magma.TeamMagmaArmorItem;
 import kiwiapollo.cobblemonarmors.armor.misc.MiscArmorItem;
 import kiwiapollo.cobblemonarmors.armor.rainbowrocket.TeamRainbowRocketArmorItem;
 import kiwiapollo.cobblemonarmors.armor.rocket.TeamRocketArmorItem;
+import kiwiapollo.cobblemonarmors.armor.skull.TeamSkullArmorItem;
+import kiwiapollo.cobblemonarmors.armor.star.TeamStarArmorItem;
 import kiwiapollo.cobblemonarmors.armor.whiteplasma.WhiteTeamPlasmaArmorItem;
+import kiwiapollo.cobblemonarmors.armor.yell.TeamYellArmorItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
@@ -41,7 +45,11 @@ public class ModItemGroup {
             TeamGalacticArmorItem.getAll().forEach(itemGroup::add);
             WhiteTeamPlasmaArmorItem.getAll().forEach(itemGroup::add);
             BlackTeamPlasmaArmorItem.getAll().forEach(itemGroup::add);
+            TeamFlareArmorItem.getAll().forEach(itemGroup::add);
+            TeamSkullArmorItem.getAll().forEach(itemGroup::add);
             TeamRainbowRocketArmorItem.getAll().forEach(itemGroup::add);
+            TeamYellArmorItem.getAll().forEach(itemGroup::add);
+            TeamStarArmorItem.getAll().forEach(itemGroup::add);
             MiscArmorItem.getAll().forEach(itemGroup::add);
         });
     }

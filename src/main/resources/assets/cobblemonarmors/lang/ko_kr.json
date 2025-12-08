@@ -33,10 +33,30 @@
   "item.cobblemonarmors.black_team_plasma_leggings": "검은색 플라즈마단 바지",
   "item.cobblemonarmors.black_team_plasma_boots": "검은색 플라즈마단 장화",
 
+  "item.cobblemonarmors.team_flare_helmet": "플레어단 모자",
+  "item.cobblemonarmors.team_flare_chestplate": "플레어단 조끼",
+  "item.cobblemonarmors.team_flare_leggings": "플레어단 바지",
+  "item.cobblemonarmors.team_flare_boots": "플레어단 장화",
+
+  "item.cobblemonarmors.team_skull_helmet": "스컬단 모자",
+  "item.cobblemonarmors.team_skull_chestplate": "스컬단 조끼",
+  "item.cobblemonarmors.team_skull_leggings": "스컬단 바지",
+  "item.cobblemonarmors.team_skull_boots": "스컬단 장화",
+
   "item.cobblemonarmors.team_rainbow_rocket_helmet": "레인보우로켓단 모자",
   "item.cobblemonarmors.team_rainbow_rocket_chestplate": "레인보우로켓단 조끼",
   "item.cobblemonarmors.team_rainbow_rocket_leggings": "레인보우로켓단 바지",
   "item.cobblemonarmors.team_rainbow_rocket_boots": "레인보우로켓단 장화",
+
+  "item.cobblemonarmors.team_yell_helmet": "옐단 모자",
+  "item.cobblemonarmors.team_yell_chestplate": "옐단 조끼",
+  "item.cobblemonarmors.team_yell_leggings": "옐단 바지",
+  "item.cobblemonarmors.team_yell_boots": "옐단 장화",
+
+  "item.cobblemonarmors.team_star_helmet": "스타단 모자",
+  "item.cobblemonarmors.team_star_chestplate": "스타단 조끼",
+  "item.cobblemonarmors.team_star_leggings": "스타단 바지",
+  "item.cobblemonarmors.team_star_boots": "스타단 장화",
 
   "item.cobblemonarmors.pikachu_helmet": "피카츄 모자",
   "item.cobblemonarmors.magikarp_helmet": "잉어킹 모자",
